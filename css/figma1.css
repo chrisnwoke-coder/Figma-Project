@@ -1,0 +1,401 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.side-bar{
+    width: 16%;
+    height: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 350px;
+    background-color: #ffffff; 
+    flex-direction: column;
+    padding: 20px 10px;
+    border: 1px solid #F5F5F7;
+    float: left;
+}
+
+.Hug-text{
+    width: 188px;
+    height: auto;
+    display: flex;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.huegas-text{
+    width: auto;
+    height: auto;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.img{
+    width:22%;
+    height: 100%;
+    display: flex;
+    justify-self: flex-start;
+    align-self: center;
+}
+
+.img img{
+    width: 100%;
+    height: 100%;
+}
+
+.text{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text h1{
+    font-size: 20px;
+    color:#141522;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.hug{
+    width: 188px;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.content{
+    width: 100%;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 5px 0;
+}
+
+.content:hover{
+    background-color: #F5F5F7;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.image{
+    width: 20%;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+}
+
+.image-text{
+    width: 40%;
+    height: 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.content h1{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+}
+
+.help-center{
+    width: 188px;
+    height: 248px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #141522;
+    position: relative;
+}
+
+.question-image{
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../image/_.png');
+    background-position: center;
+    background-size: size;
+    background-repeat: no-repeat;
+    border: 4px solid #ffffff;
+    background-color: #141522;
+    position: absolute;
+    left: 70px;
+    top: -20px;
+}
+
+.help-center-content{
+    width: 152px;
+    height: 76px;
+    position: absolute;
+}
+
+.help-center-content h1{
+    font-size:16px;
+    font-family: 'satoshi', sans-serif;
+    color:#ffffff;
+    text-align: center;
+}
+
+.help-center-content p{
+    font-size: 12px;
+    color: #ffffff;
+    font-family: 'Satoshi',sans-serif;
+    text-align: center;
+    padding: 10px 5px;
+}
+
+.help-center-link{
+    width: 156px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 10px;
+    top: 200px;
+}
+
+.help-center-link h1{
+    font-size: 12px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #141522;
+}
+
+.help-center-link:hover{
+    background-color: #141522;
+    cursor: pointer;
+    border: 1px solid #F5F5F7;
+}
+
+.help-center-link:hover .link-header{
+    color: #F5F5F7;
+}
+
+.tabcontent{
+    width: 84%;
+    height: 1000px;
+    float: left;
+    background-color: #F5F5F7;
+}
+
+.tabcontent-header{
+    width:100%;
+    height: 70px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.settings-header, .settings-header-content{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.settings-header h1{
+    font-size: 24px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600px;
+}
+
+.settings-header-content{
+    width: auto;
+}
+
+.settings-header-content img{
+    width: 35px;
+    height: 90%;
+    margin: 0 10px;
+}
+
+.tabcontent-body{
+    width: 94%;
+    height: 500px;
+    margin: 25px 20px 0 30px;
+    background-color: #ffffff;
+}
+
+.tabcontent-body-header{
+    width: 94%;
+    height: 55px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 30px;
+    border-bottom: 1px solid #F5F5F7;
+}
+
+.tabcontent-body-header-content{
+    width: 200px;
+    height: 35px;
+    display: flex;
+    margin-top: 20px;
+}
+
+.tabcontent-body-header-content h1{
+    font-size: 14px;
+    width: auto;
+    height: 100%;
+    margin: 0 10px;
+    position: relative;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600px; 
+    padding: 2px 4px;
+}
+
+.general::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    top: 33.5px;
+    left: 0;
+    padding: unset;
+    background-color: #546FFF;   
+}
+
+.language{
+    width: 300px;
+    height: 87px;
+    margin: 20px 30px;
+    position: relative;
+}
+
+.language h1, .Timezone-radio h1{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600px; 
+    font-size: 14px;   
+}
+
+.language-content {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    border-radius: 10px;
+    position: absolute;
+    top: 36px;
+}
+
+.lang-select{
+    width: 100%;
+    height: 100%; /* Match the height of .language-content */
+    display: flex; /* Use flexbox to center the select */
+    justify-content: flex-start; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    border-radius: 10px;
+    border: 1px solid #F5F5F7;
+    padding: 0 10px;
+}
+
+select{
+    width: 100%; /* Let the select size based on content */
+    height: 100%; /* Adjust height for padding */
+    border: none; /* Optional: remove the default border */
+    display: flex; /* Use flexbox to center the select */
+    justify-content: flex-start;
+    align-items: center;
+    outline: none; /* Optional: remove the outline */
+    background: transparent; /* Optional: make the background transparent */
+    font-family: 'Plus Jakarta Sans', sans-serif; /* Match the font family */
+    font-size: 14px; /* Match the font size */
+
+}
+
+.Timezone-radio{
+    width: 300px;
+    height: 87px;
+    margin: 20px 30px;
+    border: 1px solid red;
+    position: relative;
+}
+
+.radio{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 27px;
+    border: 1px solid black;
+}
+
+.time-zone-12{
+    width: 40%;
+    height: 40px;
+    display: flex;
+    padding: 0 10px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #546FFF
+}
+
+.time-zone-12 h1, .time-zone-24 h1{
+   font-size: 12px;
+   font-weight: 500px;
+   font-family: 'Plus Jakarta Sans', sans-serif;
+
+}
+
+
+.time-zone-24{
+    width: 40%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 1px solid #F5F5F7;
+}
+
+input[type="radio"]:checked{
+    border: 4px solid #546FFF; /* Optional: highlight selected image */
+}
+
+.save-changes{
+    width: 216px;
+    height: 44px;
+    padding: 0 0 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px;
+    border-radius: 10px;
+    background-color: #546FFF;
+}
+
+.save-changes h1 a{
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-decoration: none;
+}
