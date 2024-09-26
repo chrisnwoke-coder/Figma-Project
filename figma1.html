@@ -23,14 +23,14 @@
                             <!-- <img src="image/category-2.png"> -->
                             <div class="image"><img src="image/category-2.png"></div>
                             <div class="image-text">
-                                <h1>Overview</h1>
+                                <h1><a href="#">Overview</a></h1>
                             </div>
                         </div>
                         <div class="content">
                             <!-- <img src="image/book.png"> -->
                             <div class="image"><img src="image/book.png"></div>
                             <div class="image-text">
-                                <h1>Task</h1>
+                                <h1><a href="#">Tasks</a></h1>
                             </div>
                             
                         </div>
@@ -38,7 +38,7 @@
                             <!-- <img src="image/user-octagon.png"> -->
                             <div class="image"><img src="image/user-octagon.png"></div>
                             <div class="image-text">
-                                <h1>Mentors</h1>
+                                <h1><a href="#">Mentors</a></h1>
                             </div>
                            
                         </div>
@@ -46,15 +46,15 @@
                             <!-- <img src="image/message.png"> -->
                             <div class="image"><img src="image/message.png"></div>
                             <div class="image-text">
-                                <h1>Message</h1>
+                                <h1><a href="#">Message</a></h1>
                             </div>
                            
                         </div>
-                        <div class="content">
+                        <div class="content active">
                             <!-- <img src="image/setting-2.png"> -->
                             <div class="image"><img src="image/setting-2.png"></div>
                             <div class="image-text">
-                                <h1>Settings</h1>
+                                <h1><a href="#">Settings</a></h1>
                             </div>
                             
                         </div>
@@ -70,7 +70,7 @@
                     </div>
 
                     <div class="help-center-link">
-                        <h1 class="link-header">Go To Help Center</h1>
+                        <a href="#"><h1 class="link-header">Go To Help Center</h1></a>
                     </div>
 
                 </div><!--help-center-->
@@ -84,8 +84,8 @@
                     <h1>Settings</h1>
                 </div>
                 <div class="settings-header-content">
-                    <img src="image/notif.png">
-                    <img src="image/Profil.png">
+                    <a href="#"><img src="image/notif.png"></a>
+                    <a href="#"><img src="image/Profil.png"></a>
                 </div>
 
         </div> <!--tabcontent-header-->
@@ -93,12 +93,13 @@
         <div class="tabcontent-body">
             <div class="tabcontent-body-header">
                 <div class="tabcontent-body-header-content">
-                    <h1 class="general">General</h1>
-                    <h1>Notification</h1>
+                    <button class="general" onclick="settingsInfo(event, 'gen-content')"  id="defaultOpen">General</button>
+                    <button class="general" onclick="settingsInfo(event, 'not-content')">Notification</button>
                 </div>
             </div><!--tabcontent-body-header-->
 
-        
+    <div class="general-tabcontent" id="gen-content">    
+
             <div class="language">
                 <h1>Language</h1>
                 <div class="language-content">
@@ -140,31 +141,114 @@
 
             </div><!--language-->
 
-        <div class="Timezone-radio">
-            <h1>Timezone</h1>
-            <form class="radio">
-                <div class="time-zone-12">
-                    <h1>24 Hours</h1>
-                    <input type="radio" name="time" value="24 Hours" checked>
-                </div>
-
-            <div class="time-zone-24">
-                <h1>12 Hours</h1>
-                 <input type="radio" name="time" value="12 Hours">
+            <div class="Timezone-radio">
+                <h1>Timezone</h1>
+                <form class="radio"> 
+                    <div class="time-zone-12" id="zone-12">
+                        <label for="time-24"><h1>24 Hours</h1></label>
+                        <input type="radio" name="time" value="24 Hours" id="time-24" checked>
+                    </div>
+            
+                    <div class="time-zone-24" id="zone-24">
+                        <label for="time-12"><h1>12 Hours</h1></label>
+                        <input type="radio" name="time" value="12 Hours" id="time-12">
+                    </div>
+                </form>
             </div>
-
-            </form>
-        </div><!--Timezone-radio-->
+            
 
         <div class="save-changes">
-            <h1><a href="#">Save Changes</a></h1>
+            <a href="#"><h1>Save Changes</h1></a>
         </div>
+
+    </div><!--gen-tabcontent-->
+
+
+    <div class="general-tabcontent" id="not-content">
+    
+    <div class="switch-toggle">
+
+        <label class="switch">
+            <input type="checkbox" id="flexSwitchCheckDefault">
+            <span class="slider"></span>
+        </label>
+
+        <span class="label-text">Message</span>
+
+    </div>
+
+    <div class="switch-toggle">
+
+        <label class="switch">
+            <input type="checkbox" id="flexSwitchCheckDefault">
+            <span class="slider"></span>
+        </label>
+
+        <span class="label-text">Task Update</span>
+
+    </div>
+
+
+    <div class="switch-toggle">
+
+        <label class="switch">
+            <input type="checkbox" id="flexSwitchCheckDefault">
+            <span class="slider"></span>
+        </label>
+
+        <span class="label-text">Task Deadline</span>
+
+    </div>
+
+
+    <div class="switch-toggle">
+
+        <label class="switch">
+            <input type="checkbox" id="flexSwitchCheckDefault">
+            <span class="slider"></span>
+        </label>
+
+        <span class="label-text">Mentor Help</span>
+
+    </div>
+
+
+    <div class="save-changes">
+        <a href="#"><h1>Save Changes</h1></a>
+    </div>
+
+    </div><!--gen-tabcontent-->
+
+
     
       </div><!--tabcontent-body-->
 
 
 </div> <!--tabcontent-->
  <!--tabcontent-->
+
+    <script>
+        function settingsInfo(evt, cont){
+            var i, gen_content, general;
+            gen_content = document.getElementsByClassName('general-tabcontent');
+            for(i=0; i<gen_content.length; i++){
+            gen_content[i].style.display = "none";
+            }
+            
+            general = document.getElementsByClassName('general');
+            for(i=0; i<general.length; i++){
+                general[i].className = general[i].className.replace(" active", "");
+            }
+
+            document.getElementById(cont).style.display = "block";
+            evt.currentTarget.className += " active";
+            
+        }
+        
+        document.getElementById("defaultOpen").click();
+
+
+    </script>
 
     </body>
 </html>

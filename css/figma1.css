@@ -84,7 +84,7 @@
     margin: 5px 0;
 }
 
-.content:hover{
+.content:hover, .active{
     background-color: #F5F5F7;
     border-radius: 10px;
     cursor: pointer;
@@ -103,16 +103,23 @@
 .image-text{
     width: 40%;
     height: 24px;
+}
+
+.image-text h1{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
-
-.content h1{
+.image-text h1 a{
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 14px;
+    text-decoration: none;
+    color: #141522;
 }
+
 
 .help-center{
     width: 188px;
@@ -167,16 +174,23 @@
 .help-center-link{
     width: 156px;
     height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
     background-color: #ffffff;
     border-radius: 10px;
     top: 200px;
 }
 
-.help-center-link h1{
+.help-center-link a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.help-center-link a h1{
     font-size: 12px;
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: #141522;
@@ -227,10 +241,10 @@
     width: auto;
 }
 
-.settings-header-content img{
+.settings-header-content a img{
     width: 35px;
     height: 90%;
-    margin: 0 10px;
+    margin: 0 7px;
 }
 
 .tabcontent-body{
@@ -257,27 +271,120 @@
     margin-top: 20px;
 }
 
-.tabcontent-body-header-content h1{
+.tabcontent-body-header-content button{
     font-size: 14px;
-    width: auto;
+    width: 100%;
     height: 100%;
-    margin: 0 10px;
     position: relative;
+    margin: 0 10px;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 600px; 
     padding: 2px 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-bottom: 1px solid #F5F5F7;
+    background-color: #ffffff;
 }
 
-.general::before{
+.tabcontent-body-header-content button::before{
     position: absolute;
     content: "";
     width: 100%;
     height: 2px;
-    top: 33.5px;
     left: 0;
-    padding: unset;
-    background-color: #546FFF;   
+    right: 0;
+    bottom: 0;
+    transition: 0.5s ease;
 }
+
+
+.tabcontent-body-header-content button.active::before{
+    background-color: #546FFF;
+    width: 100%;
+    left: 0;
+}
+
+
+.general-tabcontent{
+    padding: 10px 0 0 0;
+    display: none;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+ }
+ 
+ 
+ .switch-toggle{
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     gap: 20px;
+     width: 195px;
+     height: auto;
+     margin: 20px 30px;
+ }
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    
+}
+
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ddd;
+    transition: .4s;
+    border-radius: 34px;
+    border: 1px solid #F5F5F7;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 100px;
+}
+
+input:checked + .slider {
+    background-color: #ffffff;
+    border: 1px solid #F5F5F7;
+}
+
+input:checked + .slider:before {
+    transform: translateX(29px);
+    background-color: #546FFF;
+}
+
+.label-text {
+    font-size: 14px;
+    font-weight: 600px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+
+}
+
 
 .language{
     width: 300px;
@@ -327,15 +434,14 @@ select{
 
 }
 
-.Timezone-radio{
+.Timezone-radio {
     width: 300px;
     height: 87px;
     margin: 20px 30px;
-    border: 1px solid red;
     position: relative;
 }
 
-.radio{
+.radio {
     width: 100%;
     height: 70%;
     display: flex;
@@ -343,59 +449,69 @@ select{
     align-items: center;
     position: absolute;
     top: 27px;
-    border: 1px solid black;
 }
 
-.time-zone-12{
+.time-zone-12, .time-zone-24 {
     width: 40%;
     height: 40px;
     display: flex;
-    padding: 0 10px;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px;
-    border: 1px solid #546FFF
-}
-
-.time-zone-12 h1, .time-zone-24 h1{
-   font-size: 12px;
-   font-weight: 500px;
-   font-family: 'Plus Jakarta Sans', sans-serif;
-
-}
-
-
-.time-zone-24{
-    width: 40%;
-    height: 40px;
-    display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space between label and radio button */
     align-items: center;
     padding: 0 10px;
     border-radius: 10px;
-    border: 1px solid #F5F5F7;
+    border: 1px solid #F5F5F7; /* Default border color */
+    transition: border-color 0.3s; /* Optional: smooth transition */
 }
 
-input[type="radio"]:checked{
-    border: 4px solid #546FFF; /* Optional: highlight selected image */
+.time-zone-12.active, .time-zone-24.active{
+    border: 1px solid #546FFF;
 }
+
+.time-zone-12:hover,.time-zone-24:hover{
+    border: 1px solid #546FFF;
+}
+
+.time-zone-12 h1, .time-zone-24 h1 {
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+input[type="radio"]{
+    width: 15px;
+    height: 15px;
+    color:#546FFF;
+    border: 4px solid #546FFF;
+}
+
 
 .save-changes{
     width: 216px;
     height: 44px;
     padding: 0 0 15px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 30px;
+    margin: 35px 0 0 30px;
     border-radius: 10px;
     background-color: #546FFF;
 }
 
-.save-changes h1 a{
+.save-changes a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.save-changes a h1{
     color: #ffffff;
     font-size: 14px;
     font-weight: 600px;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    text-decoration: none;
+}
+
+.save-changes:hover{
+    cursor: pointer;
 }
