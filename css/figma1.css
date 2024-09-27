@@ -80,19 +80,40 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    position: relative;
     margin: 5px 0;
+    border-radius: 10px;
 }
 
-.content:hover, .active{
+.content::before{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.content.active{
     background-color: #F5F5F7;
     border-radius: 10px;
     cursor: pointer;
 }
 
+.content:hover{
+    background-color: #F5F5F7;
+    cursor: pointer;
+}
+
+
+
 .image{
     width: 20%;
     height: 24px;
+    right: 115px;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,23 +123,23 @@
 
 .image-text{
     width: 40%;
+    position: absolute;
     height: 24px;
+    left: 75px;
 }
 
 .image-text h1{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.image-text h1 a{
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 14px;
     text-decoration: none;
     color: #141522;
+    width: 100%;
+    height: 100%;
 }
+
 
 
 .help-center{
@@ -145,6 +166,7 @@
     background-repeat: no-repeat;
     border: 4px solid #ffffff;
     background-color: #141522;
+    filter: blur(1px);
     position: absolute;
     left: 70px;
     top: -20px;
@@ -222,6 +244,132 @@
     align-items: center;
     padding: 0 30px;
 }
+
+.Task{
+    height: auto;
+    display: flex;
+    padding: unset;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.task-details{
+    width: 100%;
+    height: 70px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.task-details-1{
+    width: 100%;
+    height: 70px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-search-form {
+    width: 40%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start; /* Center the search container */
+    align-items: center;
+}
+
+.search-container {
+    position: relative; /* Create a positioning context */
+    width: 380px; /* Make sure it takes full width */
+    
+}
+
+.task-search-form form input {
+    width: 100%;
+    height: 52px;
+    border-radius: 10px;
+    border: 1px solid #F5F5F7;
+    padding:0 30px; /* Add padding to avoid text overlapping with the icon */
+}
+
+.task-search-form form a img {
+    position: absolute; /* Position the icon */
+    right: 10px; /* Space from the right edge */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertical alignment */
+    width: 20px;
+    height: 20px;
+    border: none; /* Remove border */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.task-search-form form input::placeholder {
+    color: #54577A; /* Change the color of the placeholder */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    opacity: 1; /* Ensures full opacity; default might be lower in some browsers */
+    font-size: 12px; /* Change the font size */
+    font-weight: 400px;
+}
+
+
+.task-section{
+    width: 35%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.category, .deadline{
+    width: 148px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 1px solid #F5F5F7;
+    border-radius: 10px;
+}
+
+.deadline{
+    width: 196px;
+}
+
+.category-image, .deadline-image{
+   width: 92px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   height: 24px;
+}
+
+.deadline-image{
+    width: 140px;
+}
+
+.category h1, .task-section h1{
+    font-size: 12px;
+    color: #141522;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600px;
+
+}
+
+.task-content{
+    width: 720px;
+    height: 952px;
+    background-color: #ffffff;
+    border: 1px solid red;
+}
+
+#content-2{
+    height: auto;
+}
+
 
 .settings-header, .settings-header-content{
     width: 150px;
@@ -332,7 +480,7 @@
     position: relative;
     display: inline-block;
     width: 55px;
-    height: 30px;
+    height: 25px;
 }
 
 .switch input {
@@ -362,7 +510,7 @@
     height: 20px;
     width: 20px;
     left: 4px;
-    bottom: 4px;
+    bottom: 2px;
     background-color: white;
     transition: .4s;
     border-radius: 100px;

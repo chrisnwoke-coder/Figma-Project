@@ -19,42 +19,42 @@
                     </div>
 
                     <div class="hug">
-                        <div class="content">
+                        <div class="content" onclick="openFolder(event, 'content-1')">
                             <!-- <img src="image/category-2.png"> -->
                             <div class="image"><img src="image/category-2.png"></div>
                             <div class="image-text">
-                                <h1><a href="#">Overview</a></h1>
+                                <h1>Overview</h1>
                             </div>
                         </div>
-                        <div class="content">
+                        <div class="content" onclick="openFolder(event, 'content-2')">
                             <!-- <img src="image/book.png"> -->
                             <div class="image"><img src="image/book.png"></div>
                             <div class="image-text">
-                                <h1><a href="#">Tasks</a></h1>
+                                <h1>Tasks</h1>
                             </div>
                             
                         </div>
-                        <div class="content">
+                        <div class="content" onclick="openFolder(event, 'content-3')">
                             <!-- <img src="image/user-octagon.png"> -->
                             <div class="image"><img src="image/user-octagon.png"></div>
                             <div class="image-text">
-                                <h1><a href="#">Mentors</a></h1>
+                                <h1>Mentors</h1>
                             </div>
                            
                         </div>
-                        <div class="content">
+                        <div class="content" onclick="openFolder(event, 'content-4')">
                             <!-- <img src="image/message.png"> -->
                             <div class="image"><img src="image/message.png"></div>
                             <div class="image-text">
-                                <h1><a href="#">Message</a></h1>
+                                <h1>Message</h1>
                             </div>
                            
                         </div>
-                        <div class="content active">
+                        <div class="content" onclick="openFolder(event, 'content-5')">
                             <!-- <img src="image/setting-2.png"> -->
                             <div class="image"><img src="image/setting-2.png"></div>
                             <div class="image-text">
-                                <h1><a href="#">Settings</a></h1>
+                                <h1>Settings</h1>
                             </div>
                             
                         </div>
@@ -77,8 +77,62 @@
 
         </div><!--sidebar-->
 
-        <!--tabcontent-->
-        <div class="tabcontent" id="settings">
+
+        <!--tabcontent-2-->
+    
+        <div class="tabcontent" id="content-2">
+            
+            <div class="tabcontent-header Task">
+                <div class="task-details">
+                <div class="settings-header">
+                    <h1>Detail Task</h1>
+                </div>
+
+                <div class="settings-header-content">
+                    <a href="#"><img src="image/notif.png"></a>
+                    <a href="#"><img src="image/Profil.png"></a>
+                </div>
+
+            </div>
+
+            <div class="task-details-1">
+
+                <div class="task-search-form">
+                    <form>
+                        <div class="search-container">
+                            <input type="search" placeholder="search task">
+                            <a href="#"><img src="image/search-normal.png"></a>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="task-section">
+                        <div class="category">
+                            <div class="category-image">
+                             <img src="image/element-1.png">
+                             <h1>Category</h1>
+                            </div>
+                        </div>
+
+                        <div class="deadline">
+                            <div class="deadline-image">
+                                <img src="image/sort.png">
+                                <h1>Sort By: Deadline</h1>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+
+        </div> <!--tabcontent-2-->
+        
+        <!--tabcontent-2-->
+
+
+        <!--tabcontent-5-->
+    
+        <div class="tabcontent" id="content-5">
             <div class="tabcontent-header">
                 <div class="settings-header">
                     <h1>Settings</h1>
@@ -91,6 +145,7 @@
         </div> <!--tabcontent-header-->
 
         <div class="tabcontent-body">
+
             <div class="tabcontent-body-header">
                 <div class="tabcontent-body-header-content">
                     <button class="general" onclick="settingsInfo(event, 'gen-content')"  id="defaultOpen">General</button>
@@ -224,31 +279,9 @@
       </div><!--tabcontent-body-->
 
 
-</div> <!--tabcontent-->
+</div> <!--tabcontent-5-->
  <!--tabcontent-->
 
-    <script>
-        function settingsInfo(evt, cont){
-            var i, gen_content, general;
-            gen_content = document.getElementsByClassName('general-tabcontent');
-            for(i=0; i<gen_content.length; i++){
-            gen_content[i].style.display = "none";
-            }
-            
-            general = document.getElementsByClassName('general');
-            for(i=0; i<general.length; i++){
-                general[i].className = general[i].className.replace(" active", "");
-            }
-
-            document.getElementById(cont).style.display = "block";
-            evt.currentTarget.className += " active";
-            
-        }
-        
-        document.getElementById("defaultOpen").click();
-
-
-    </script>
-
+    <script type="text/javascript" src="script/script.js"></script>
     </body>
 </html>
