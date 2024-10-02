@@ -7,9 +7,12 @@
     <link rel="stylesheet" type="text/css" href="css/figma1.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
 </head>
-    <body>
+<body>
+
         <div class="side-bar">
 
                 <div class="Hug-text">
@@ -26,7 +29,7 @@
                                 <h1>Overview</h1>
                             </div>
                         </div>
-                        <div class="content" onclick="openFolder(event, 'content-2')">
+                        <div class="content" onclick="openFolder(event, 'content-2')" id="openContent">
                             <!-- <img src="image/book.png"> -->
                             <div class="image"><img src="image/book.png"></div>
                             <div class="image-text">
@@ -78,61 +81,367 @@
         </div><!--sidebar-->
 
 
-        <!--tabcontent-2-->
-    
-        <div class="tabcontent" id="content-2">
+         <!--tabcontent-2-->
+         <div class="tabcontent" id="content-2">
             
             <div class="tabcontent-header Task">
                 <div class="task-details">
-                <div class="settings-header">
-                    <h1>Detail Task</h1>
+                    <div class="settings-header">
+                        <h1>Detail Task</h1>
+                    </div>
+
+                    <div class="settings-header-content">
+                        <a href="#"><img src="image/notif.png"></a>
+                        <a href="#"><img src="image/Profil.png"></a>
+                    </div>
+
+                </div><!--task-details-->
+
+            <div class="task-details-1">
+
+                    <div class="task-search-form">
+                        <form class ="form-search">
+                            <div class="search-container">
+                                <input type="search" placeholder="search task">
+                                <a href="#"><img src="image/search-normal.png"></a>
+                            </div>
+                        </form>
+                    </div>
+
+                        <div class="task-section">
+                            <div class="category">
+                                <div class="category-image">
+                                <img src="image/element-1.png">
+                                <h1>Category</h1>
+                                </div>
+                            </div>
+
+                            <div class="deadline">
+                                <div class="deadline-image">
+                                    <img src="image/sort.png">
+                                    <h1>Sort By: Deadline</h1>
+                                </div>
+                            </div>
+                        </div>
+             </div><!--task-details-1-->
+
+            
+        </div><!--tabcontent-header task-->
+
+
+    <div class="tabcontent-body-content">
+        
+        <div class="tabcontent-body-content-1">
+
+            <div class="task-menu">
+                <div class="task-menu-video">
+                    <video id="video" poster="image/Image.png">
+                        <source src="image/responsive.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="custom-controls">
+                        <button class="play"><i class="fas fa-play"></i></button>
+                        <button class="pause" style="display:none;"><i class="fas fa-pause"></i></button>
+                        <input type="range" class="progress" value="0" />
+                        <span class="current-time">0:00</span> / <span class="duration-time">0:00</span>
+                        <button class="mute"><i class="fas fa-volume-up"></i></button>
+                        <input type="range" class="volume" value="100" />
+                        <button class="fullscreen"><i class="fas fa-expand"></i></button>
+                        <button class="mirror"><i class="fas fa-arrows-alt-h"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+        
+            <div class="mobile-apps">
+                <h1>Creating Awesome Mobile Apps</h1>
+                <p> UIUXDesign.AppsDesign <span style="color:black;"> | </span> <span>+GetMentors</span></p>
+
+                <div class="icons-mobile">
+                    <div class="student-icon-image">
+                        <div class="icon-image"></div>
+                        <h1>200StudentsInvolved</h1>
+                    </div>
+
+                    <div class="icon-hour">
+                        <div class="icon-image-1"></div>
+                        <h1>1Hour</h1>
+                    </div>
+                </div><!--icons-mobile-->
+            </div><!--mobile-apps-->
+
+            <div class="description">
+                <h1>Description</h1>
+                <p>Follow the video tutorial above. Understand how to use each tool in the Figma application. Also learn how to make a good and correct design. Starting from spacing, typography, content, and many other design hierarchies. Then try to make it yourself with your imagination and inspiration.</p>
+            </div><!--description-->
+
+            <div class="essence-assessment">
+                <h1>Essence of Assessment</h1>
+
+                <div class="Assessment-content">
+                    <div class="Assessment-content-1">
+                        <div class="assessment-icon"></div>
+                        <p>Understanding the tools in Figma</p>
+                    </div>
+                    <div class="Assessment-content-1">
+                        <div class="assessment-icon"></div>
+                        <p>Understanding the basics of making design</p>
+                    </div>
+                    <div class="Assessment-content-1">
+                        <div class="assessment-icon"></div>
+                        <p>Designing a mobile Application using figma</p>
+                    </div>
+                    <div class="Assessment-content-1">
+                        <div class="assessment-icon"></div>
+                        <p>Presenting the design flow</p>
+                    </div>
                 </div>
 
+            </div><!--essence-assessment-->
+
+        </div> <!--tabcontent-body-content-1-->     
+
+        
+             <div class="assigned-assignment">
+                <h1>Assigned Assignments</h1>
+                <div class="creating-awesome">
+                    <h3>Creating Awesome Mobile Apps</h3>
+                    <p>UIUXDesign.AppsDesign</p>
+                </div>
+                <div class="creating-awesome">
+                    <h3>Detail Student</h3>
+                    <div class="student-layout">
+                        <div class="student-info">
+                            <p>Student's name:</p>
+                            <p class="info">Skyler Dias</p>
+                        </div>
+                        <div class="student-info">
+                            <p>Student's Class:</p>
+                            <p class="info">MPA2</p>
+                        </div>
+                        <div class="student-info">
+                            <p>Student's Number:</p>
+                            <p class="info">10</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="creating-awesome">
+                    <h3>File Task</h3>
+                    <div class="date-modified">
+                        <div class="file-task-modified">
+                            <p>Last Modified</p>
+                            <p>1july2024</p>
+                        </div>
+
+                        <div class="file-permission">
+                            <p>File submissions</p>
+                            <div class="dropzone">
+                                <div class="file-image"></div>
+                            </div>
+                            <p class="label-drag">*drag or browse from device</p>
+                        </div>
+                    </div>
+                </div>
+
+             </div><!--assigned assignment-->
+
+     </div><!--tabcontent-body-content-->
+
+
+        </div><!--tabcontent-2-->   
+        <!--tabcontent-2-->
+
+
+        <!--tabcontent-4-->
+        <div class="tabcontent settings" id="content-4">
+            <div class="tabcontent-header">
+                <div class="settings-header">
+                    <h1>Message</h1>
+                </div>
                 <div class="settings-header-content">
                     <a href="#"><img src="image/notif.png"></a>
                     <a href="#"><img src="image/Profil.png"></a>
                 </div>
 
-            </div>
+             </div> <!--tabcontent-header-->
 
-            <div class="task-details-1">
-
-                <div class="task-search-form">
-                    <form>
-                        <div class="search-container">
-                            <input type="search" placeholder="search task">
-                            <a href="#"><img src="image/search-normal.png"></a>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="task-section">
-                        <div class="category">
-                            <div class="category-image">
-                             <img src="image/element-1.png">
-                             <h1>Category</h1>
+             <div class="tabcontent-body-content">
+                <div class="chat-layout">
+                    <div class="task-search-form chat">
+                        <form class="form-search">
+                            <div class="search-container">
+                                <input type="search" placeholder="search task">
+                                <a href="#"><img src="image/search-normal.png"></a>
                             </div>
-                        </div>
+                        </form>
+                    </div><!--task-search-form chat-->
 
-                        <div class="deadline">
-                            <div class="deadline-image">
-                                <img src="image/sort.png">
-                                <h1>Sort By: Deadline</h1>
+                    <div class="chat-messages">
+                        <div class="chat-messages-info">
+                            <div class="chat-message-text">
+                                <div class="chat-image image-1"></div>
+                                <div class="chat-messages-text">
+                                    <div class="chat-messages-header">
+                                        <h3>Angelina Crison</h3>
+                                        <p>1mAgo</p>
+                                    </div>
+                                    <div class="chat-messages-content">
+                                        <p style="font-weight: bolder;">Thank you very much, i'm glad</p>
+                                        <div class="online-signal signal-1"></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                </div>
-            </div>
+                        </div><!--chat-messsage-info-->
+                        <div class="horizontal-line">
+                            <!-- <img src="image/Line.png"> -->
+                        </div><!--horizontal-line-->
 
-        </div>
+                        <div class="chat-messages-info chat-2">
+                            <div class="chat-message-text">
+                                <div class="chat-image image-2"></div>
+                                <div class="chat-messages-text">
+                                    <div class="chat-messages-header">
+                                        <h3>Jacob Saris</h3>
+                                        <p>2mAgo</p>
+                                    </div>
+                                    <div class="chat-messages-content">
+                                        <p>You:sure let me tell you about w..</p>
+                                        <div class="online-signal signal-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--chat-messsage-info-->
+                        <div class="horizontal-line">
+                            <!-- <img src="image/Line.png"> -->
+                        </div><!--horizontal-line-->
 
-        </div> <!--tabcontent-2-->
-        
-        <!--tabcontent-2-->
+                        <div class="chat-messages-info chat-3">
+                            <div class="chat-message-text">
+                                <div class="chat-image image-3"></div>
+                                <div class="chat-messages-text">
+                                    <div class="chat-messages-header">
+                                        <h3>Emery Korsgard</h3>
+                                        <p>3mAgo</p>
+                                    </div>
+                                    <div class="chat-messages-content">
+                                        <p style="font-weight: bolder;">Thanks you're very helpful</p>
+                                        <div class="online-signal signal-3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--chat-messsage-info-->
+                        <div class="horizontal-line">
+                            <!-- <img src="image/Line.png"> -->
+                        </div><!--horizontal-line-->
 
 
-        <!--tabcontent-5-->
-    
-        <div class="tabcontent" id="content-5">
+                        <div class="chat-messages-info chat-4">
+                            <div class="chat-message-text">
+                                <div class="chat-image image-4"></div>
+                                <div class="chat-messages-text">
+                                    <div class="chat-messages-header">
+                                        <h3>Jeremy Zucker</h3>
+                                        <p>4mAgo</p>
+                                    </div>
+                                    <div class="chat-messages-content">
+                                        <p>You:Sure let me teach you about</p>
+                                        <div class="online-signal signal-4"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--chat-messsage-info-->
+                        <div class="horizontal-line">
+                            <!-- <img src="image/Line.png"> -->
+                        </div><!--horizontal-line-->
+
+
+                        <div class="chat-messages-info chat-5">
+                            <div class="chat-message-text">
+                                <div class="chat-image image-5"></div>
+                                <div class="chat-messages-text">
+                                    <div class="chat-messages-header">
+                                        <h3>Nadia Laurem</h3>
+                                        <p>5mAgo</p>
+                                    </div>
+                                    <div class="chat-messages-content">
+                                        <p style="font-weight: bolder;">Is there anything i can help?just...</p>
+                                        <div class="online-signal signal-5"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--chat-messsage-info-->
+                        <div class="horizontal-line">
+                            <!-- <img src="image/Line.png"> -->
+                        </div><!--horizontal-line-->
+
+
+                        <div class="chat-messages-info chat-6">
+                            <div class="chat-message-text">
+                                <div class="chat-image image-6"></div>
+                                <div class="chat-messages-text">
+                                    <div class="chat-messages-header">
+                                        <h3>Jason Statham</h3>
+                                        <p>6mAgo</p>
+                                    </div>
+                                    <div class="chat-messages-content">
+                                        <p>You:Let me share about...</p>
+                                        <div class="online-signal signal-6"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--chat-messsage-info-->
+                        <div class="horizontal-line">
+                            <!-- <img src="image/Line.png"> -->
+                        </div><!--horizontal-line-->
+
+
+                        <div class="chat-messages-info chat-7">
+                            <div class="chat-message-text">
+                                <div class="chat-image image-7"></div>
+                                <div class="chat-messages-text">
+                                    <div class="chat-messages-header">
+                                        <h3>Angel Kimberly</h3>
+                                        <p>7mAgo</p>
+                                    </div>
+                                    <div class="chat-messages-content">
+                                        <p style="font-weight: bolder;">Okay i know very well about it</p>
+                                        <div class="online-signal signal-7"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--chat-messsage-info-->
+                        <div class="horizontal-line">
+                            <!-- <img src="image/Line.png"> -->
+                        </div><!--horizontal-line-->
+
+
+                        <div class="chat-messages-info chat-8">
+                            <div class="chat-message-text">
+                                <div class="chat-image image-8"></div>
+                                <div class="chat-messages-text">
+                                    <div class="chat-messages-header">
+                                        <h3>Jason Momoa</h3>
+                                        <p>7mAgo</p>
+                                    </div>
+                                    <div class="chat-messages-content">
+                                        <p>You: Sure let me tell you about...</p>
+                                        <div class="online-signal signal-8"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--chat-messsage-info-->
+
+                    </div><!--chat-messages-->
+                </div><!--chat-layout-->
+             </div><!--tabcontent-body-content-->
+
+        </div><!--tabcontent-4-->
+        <!--tabcontent-4-->
+
+
+        <!--tabcontent-5--> 
+        <div class="tabcontent settings-message" id="content-5">
             <div class="tabcontent-header">
                 <div class="settings-header">
                     <h1>Settings</h1>
@@ -279,7 +588,8 @@
       </div><!--tabcontent-body-->
 
 
-</div> <!--tabcontent-5-->
+        </div> <!--tabcontent-5-->
+
  <!--tabcontent-->
 
     <script type="text/javascript" src="script/script.js"></script>

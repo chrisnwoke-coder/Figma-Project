@@ -19,7 +19,7 @@
 }
 
 .Hug-text{
-    width: 188px;
+    width: 180px;
     height: auto;
     display: flex;
     gap:20px;
@@ -66,7 +66,7 @@
 }
 
 .hug{
-    width: 188px;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: flex-start;
@@ -74,6 +74,7 @@
     flex-direction: column;
     margin-top: 20px;
 }
+
 .content{
     width: 100%;
     height: 44px;
@@ -106,7 +107,6 @@
     background-color: #F5F5F7;
     cursor: pointer;
 }
-
 
 
 .image{
@@ -143,7 +143,7 @@
 
 
 .help-center{
-    width: 188px;
+    width: 170px;
     height: 248px;
     border-radius: 10px;
     display: flex;
@@ -166,9 +166,8 @@
     background-repeat: no-repeat;
     border: 4px solid #ffffff;
     background-color: #141522;
-    filter: blur(1px);
     position: absolute;
-    left: 70px;
+    left: 60px;
     top: -20px;
 }
 
@@ -194,7 +193,7 @@
 }
 
 .help-center-link{
-    width: 156px;
+    width: 150px;
     height: 40px;
     position: absolute;
     background-color: #ffffff;
@@ -229,8 +228,23 @@
 }
 
 .tabcontent{
-    width: 84%;
+    width: 83.5%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    float: left;
+    background-color: #F5F5F7;
+}
+
+.settings-message{
+    width: 83.5%;
     height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     float: left;
     background-color: #F5F5F7;
 }
@@ -243,16 +257,23 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 30px;
+    border: 1px solid red;
 }
 
 .Task{
+    width:100%;
     height: auto;
     display: flex;
     padding: unset;
-    justify-content: flex-start;
-    align-items: center;
     flex-direction: column;
+}
 
+.tabcontent-body-content{
+    width: auto;
+    height: auto;
+    display: flex;
+    border: 1px solid red;
+    animation: fadeEffect 1s;
 }
 
 .task-details{
@@ -275,28 +296,42 @@
 }
 
 .task-search-form {
-    width: 40%;
-    height: 60px;
+    width: 408px; /* Set a fixed width */
+    height: 52px; /* Set a fixed height */
     display: flex;
-    justify-content: flex-start; /* Center the search container */
     align-items: center;
 }
 
-.search-container {
-    position: relative; /* Create a positioning context */
-    width: 380px; /* Make sure it takes full width */
-    
+.chat{
+    width:352px;
+    height: 52px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 20px;
 }
 
-.task-search-form form input {
-    width: 100%;
-    height: 52px;
+.form-search {
+    width: 100%; /* Make the form take full width of the parent */
+    height: 100%; /* Make the form take full height of the parent */
+    display: flex; /* Enable flexbox */
+}
+
+.search-container{
+    position: relative;
+    width: 100%; /* Make the search container take full width */
+    height: 100%; /* Make the search container take full height */
+}
+
+.task-search-form input[type="search"] {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
     border-radius: 10px;
     border: 1px solid #F5F5F7;
-    padding:0 30px; /* Add padding to avoid text overlapping with the icon */
+    padding: 0 30px; /* Padding for text */
 }
 
-.task-search-form form a img {
+.task-search-form a img {
     position: absolute; /* Position the icon */
     right: 10px; /* Space from the right edge */
     top: 50%; /* Center vertically */
@@ -307,14 +342,13 @@
     cursor: pointer; /* Change cursor on hover */
 }
 
-.task-search-form form input::placeholder {
+.task-search-form input::placeholder {
     color: #54577A; /* Change the color of the placeholder */
     font-family: 'Plus Jakarta Sans', sans-serif;
-    opacity: 1; /* Ensures full opacity; default might be lower in some browsers */
+    opacity: 1; /* Ensures full opacity */
     font-size: 12px; /* Change the font size */
-    font-weight: 400px;
+    font-weight: 400; /* Change to 400 */
 }
-
 
 .task-section{
     width: 35%;
@@ -359,15 +393,643 @@
 
 }
 
-.task-content{
+.tabcontent-body-content-1{
     width: 720px;
-    height: 952px;
-    background-color: #ffffff;
-    border: 1px solid red;
+    height: auto;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 20px 20px;
+    padding-bottom: 10px;
+    flex-direction: column;
+    border-radius: 10px;
 }
 
-#content-2{
+  .task-menu {
+    width: 100%;
+    height: 360px; /* Adjust as needed */
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.task-menu-video {
+    width: 100%;
+    height: 360px;
+    border-radius: 10px;
+    position: relative;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.custom-controls {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    background-color: #ffffff; /* Background color */
+    position: absolute;
+    width: 672px; /* Width */
+    height: 44px; /* Height */
+    border-radius: 10px;
+    padding: 5px;
+    top: 292px;
+    left: 24px;
+}
+
+.custom-controls i{
+    font-size: 15px;
+    color: #141522;
+}
+
+.custom-controls input[type="range"] {
+    margin: 0 5px;
+}
+
+.volume {
+    width: 100px; /* Volume slider width */
+}
+
+.custom-controls button {
+    border: none;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    background: none;
+    cursor: pointer;
+}
+
+.progress{
+    width: 354px;
+    height: 8px;
+}
+
+.mobile-apps{
+    width: 684px;
     height: auto;
+    /* display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; */
+    flex-direction: column;
+    margin: 20px 0 0 20px;
+}
+
+.mobile-apps h1{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 32px;
+    font-weight: 600;
+    padding: 5px 0;
+    letter-spacing: -0.03em;
+    text-align: left;
+    margin-right: 10px;
+}
+
+.mobile-apps p{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 0;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+.mobile-apps p span{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #04A4F4;
+    padding: 0 2px;
+}
+
+.icons-mobile{
+    width: 356px;
+    height: 21px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.student-icon-image, .icon-hour{
+    width: 168px;
+    height: 21px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.student-icon-image h1, .icon-hour h1{
+    font-size: 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.icon-image, .icon-image-1{
+    width:16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    margin: 0 2px;
+}
+
+.icon-image{
+    background-image: url('../image/profile-2user.png');
+}
+
+.icon-image-1{
+    background-image: url('../image/clock.png');
+}
+
+.description{
+    width: 684px;
+    height: 136px;
+    /* display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column; */
+    margin: 20px 0 0 20px;
+}
+
+.description h1{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: -0.03em;
+    text-align: left;
+    padding-bottom: 12px;
+}
+
+.description p{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
+    text-align: left;
+    padding-right: 3px;
+}
+
+                      
+.essence-assessment{
+    width: 350px;
+    height: 224px;
+    /* display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; */
+    margin: 20px 0 0 20px;
+}
+
+.essence-assessment h1{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: -0.03em;
+    text-align: left;
+}
+
+.Assessment-content{
+    width: 100%;
+    height: 172px;
+    margin-top: 16px;
+}
+
+.Assessment-content-1{
+    display: flex;
+    width: auto;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.Assessment-content-1 p{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+}
+
+
+.Assessment-content-1:nth-child(2), .Assessment-content-1:nth-child(3), .Assessment-content-1:nth-child(4){
+    margin-top: 10px;
+}
+
+.assessment-icon{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../image/tick-circle.png');
+}
+
+.assigned-assignment{
+    width: 372px;
+    height: 812px;
+    border-radius: 10px;
+    margin: 20px 20px 0 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.assigned-assignment h1{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin: 0 10px;
+}
+
+.creating-awesome{
+    width: 93%;
+    display: flex;
+    justify-content:  flex-start;
+    align-content: flex-start;
+    flex-direction: column;
+}
+
+.creating-awesome:nth-of-type(1){
+    margin: 20px auto;
+    height: 104px;
+}
+
+.creating-awesome:nth-of-type(2){
+    margin: 0 auto;
+    height: 145px;
+}
+
+
+.creating-awesome:nth-of-type(1) h3{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: -0.03em;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.creating-awesome:nth-of-type(1) p{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+.student-layout{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 12px;
+}
+
+.student-info{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    margin: 5px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.student-info p{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+
+.info{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+    text-align: right;
+}
+
+.creating-awesome:nth-of-type(2) h3{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+.creating-awesome:nth-of-type(3){
+    margin: 20px auto;
+    height: 316px;
+    /* display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column; */
+}
+
+.creating-awesome:nth-of-type(3) h3{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+.date-modified{
+    width: 100%;
+    height: 268px;
+    margin-top: 20px;
+}
+
+.file-task-modified{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.file-task-modified p:nth-child(1){
+    font-family: 'Plus Jakarta Sans';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+.file-task-modified p:nth-child(2){
+    font-family: 'Plus Jakarta Sans';
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+    text-align: right;
+}
+
+.file-permission{
+    width: 100%;
+    height: 228px;
+    margin-top: 16px;
+}
+
+.file-permission p{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+.dropzone{
+    width: 100%;
+    height: 160px;
+    border: 1px dashed #546FFF;
+    margin-top: 12px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.file-image{
+    width: 32px;
+    height: 32px;
+    background-image: url("../image/folder-open.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.label-drag{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15.12px;
+    letter-spacing: -0.01em;
+    text-align: left;
+}
+
+.chat-layout{
+    width: 400px;
+    height: 908px;
+    background-color: #ffffff;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-direction: column;
+}
+
+.chat-messages{
+    width: 352px;
+    height: 768px;
+    margin: 10px 20px 0 20px;
+}
+
+.chat-messages-info{
+    width: 100%;
+    height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-messages-info.active{
+    background-color: #F5F5F7;
+}
+
+.chat-2, .chat-3,.chat-4,.chat-5,.chat-6,.chat-7,.chat-8{
+    margin-top: 15px;
+}
+
+.horizontal-line{
+    width: 312px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 30px 0 20px;
+    border: 1px solid #F5F5F7;
+}
+
+
+.chat-message-text{
+    width: 312px;
+    height: auto;
+    margin: 12px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.chat-image{
+    width: 48px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+}
+
+.image-1{
+    background-image: url('../image/pic.png');
+}
+
+.image-2{
+    background-image: url('../image/photo.png');
+}
+
+.image-3{
+    background-image: url('../image/girl.png');
+}
+
+.image-4{
+    background-image: url('../image/big.png');
+}
+
+.image-5{
+    background-image: url('../image/fine.png');
+}
+
+.image-6{
+    background-image: url('../image/man.png');
+}
+
+.image-7{
+    background-image: url('../image/beauty.png');
+}
+
+.image-8{
+    background-image: url('../image/handsome.png');
+}
+
+
+
+
+.chat-messages-text{
+    width: 252px;
+    height: 46px;
+    display: flex;
+    gap: 5px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.chat-messages-header{
+    width: 252px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-messages-header h3{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #141522;
+}
+
+.chat-messages-header p{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15.12px;
+    letter-spacing: -0.01em;
+    text-align: right;
+    color: #141522;
+}
+
+.chat-messages-content{
+    width: 252px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-messages-content p{
+    font-family: 'Plus Jakarta Sans';
+    font-size: 12px;
+    line-height: 15.12px;
+    letter-spacing: -0.01em;
+    text-align: right;
+    color: #141522;
+
+}
+
+.online-signal{
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+}
+
+.signal-1{
+    background-image: url('../image/done_all.png');
+}
+
+.signal-2{
+    background-image: url('../image/seen.png');
+}
+
+.signal-3{
+    background-image: url('../image/done_all.png');
+}
+
+.signal-4{
+    background-image: url('../image/seen.png');
+}
+
+.signal-5{
+    background-image: url('../image/done_all.png');
+}
+
+.signal-6{
+    background-image: url('../image/seen.png');
+}
+
+.signal-7{
+    background-image: url('../image/done_all.png');
+}
+
+.signal-8{
+    background-image: url('../image/seen.png');
 }
 
 
@@ -396,10 +1058,11 @@
 }
 
 .tabcontent-body{
-    width: 94%;
+    width: 97%;
     height: 500px;
-    margin: 25px 20px 0 30px;
+    margin: 25px 16px;
     background-color: #ffffff;
+    border-radius: 10px;
 }
 
 .tabcontent-body-header{
