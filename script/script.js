@@ -152,5 +152,86 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+/*messages*/
+
+document.addEventListener("DOMContentLoaded", function() {
+    window.openChat = function(evt, chat) { // Bind to the window object
+        var i, chat_tab, chat_content;
+
+        chat_content = document.getElementById('chat-content');
+        // console.log(chat_content); // Check if this is null
+
+        // if (!chat_content) {
+        //     console.error('Chat content element not found!');
+        //     return; // Exit the function if the element is not found
+        // }
+
+        chat_content.style.display = "flex";
+
+        chat_tab = document.getElementsByClassName('chat-messages-info');
+        for (i = 0; i < chat_tab.length; i++) {
+            chat_tab[i].className = chat_tab[i].className.replace(" active", "");
+        }
+
+        evt.currentTarget.className += " active";
+
+        document.getElementById(chat).style.display = "flex";
+    };
+});
 
 
+
+/*carousel*/
+const tabsBox = document.querySelector(".mentor-carousel-slider-content"),
+      allTabs = tabsBox.querySelectorAll(".carousel-slides"),
+      arrowIcons = document.querySelectorAll(".arrow");
+
+let isDragging = false;
+
+// Function to handle arrow visibility
+const handleIcons = (scrollVal) => {
+    let maxScrollableWidth = tabsBox.scrollWidth - tabsBox.clientWidth;
+    arrowIcons[0].parentElement.style.display = scrollVal <= 0 ? "flex" : "flex"; // Hide left arrow if at start
+    arrowIcons[1].parentElement.style.display = maxScrollableWidth - scrollVal <= 1 ? "flex" : "flex"; // Hide right arrow if at end
+}
+
+// Arrow click event listeners
+arrowIcons.forEach(icon => {
+    icon.addEventListener("click", () => {
+        // Scroll left or right based on which arrow is clicked
+        let scrollWidth = tabsBox.scrollLeft += icon.id === "carousel-arrow-left" ? -410 : 410;
+        handleIcons(scrollWidth);
+    });
+});
+
+// Function to set the width of each carousel slide
+const setCarouselSlideWidth = (width) => {
+    allTabs.forEach(tab => {
+        tab.style.setProperty('width', width, 'important'); // Set the desired width with !important
+    });
+};
+
+// Set the width of the carousel slides on page load
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        setCarouselSlideWidth('400px'); // Change to your desired width
+    }, 100);
+});
+
+// Dragging functionality
+const dragging = (e) => {
+    if (!isDragging) return;
+    tabsBox.classList.add("dragging");
+    tabsBox.scrollLeft -= e.movementX; // Move the scroll based on mouse movement
+    handleIcons(tabsBox.scrollLeft); // Update arrow visibility
+}
+
+const dragStop = () => {
+    isDragging = false; // Stop dragging
+    tabsBox.classList.remove("dragging");
+}
+
+// Mouse event listeners for dragging
+tabsBox.addEventListener("mousedown", () => isDragging = true);
+tabsBox.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
