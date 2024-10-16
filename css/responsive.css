@@ -1,0 +1,10 @@
+@media screen and (max-width: 1200px) {
+    .side-bar{
+        display: none;
+    }
+
+    .settings-message{
+        width: 100%;
+    }
+}
+

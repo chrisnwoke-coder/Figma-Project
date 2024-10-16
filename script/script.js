@@ -1,237 +1,288 @@
-/**sidebar*/
-function openFolder(evt,content){
-
-    if (!localStorage.getItem('tabClicked')) {
-        localStorage.setItem('tabClicked', 'true');
-        location.reload(); // Reload the page
-        return;
-    }
-    
-    var i, contnt, tabcontnt;
-    contnt = document.getElementsByClassName('content');
-    for(i=0; i<contnt.length; i++){
-        contnt[i].className = contnt[i].className.replace(" active", "")
-    }
-    tabcontnt = document.getElementsByClassName('tabcontent');
-    for(i=0; i<tabcontnt.length; i++){
-        tabcontnt[i].style.display = "none";
-    }
-
-    document.getElementById(content).style.display = "block";
-    evt.currentTarget.className += " active";
-
-}
-
-document.getElementById("openContent").click();
-
-
-
-
-/* settings*/
-function settingsInfo(evt, cont){
-    
-    if (!localStorage.getItem('tabClicked')) {
-        localStorage.setItem('tabClicked', 'true');
-        location.reload(); // Reload the page
-        return;
-    }
-    
-    var i, gen_content, general;
-    gen_content = document.getElementsByClassName('general-tabcontent');
-    for(i=0; i<gen_content.length; i++){
-    gen_content[i].style.display = "none";
-    }
-    
-    general = document.getElementsByClassName('general');
-    for(i=0; i<general.length; i++){
-        general[i].className = general[i].className.replace(" active", "");
-    }
-
-    document.getElementById(cont).style.display = "block";
-    evt.currentTarget.className += " active";
-    
-}
-
-document.getElementById("defaultOpen").click();
-
-
-/* video*/
-document.addEventListener('DOMContentLoaded', () => {
-    const video = document.getElementById('video');    
-    const playButton = document.querySelector('.play');
-    const pauseButton = document.querySelector('.pause');
-    const progress = document.querySelector('.progress');
-    const volumeControl = document.querySelector('.volume');
-    const muteButton = document.querySelector('.mute');
-    const fullscreenButton = document.querySelector('.fullscreen');
-    const mirrorButton = document.querySelector('.mirror');
-    const currentTimeDisplay = document.querySelector('.current-time');
-    const durationDisplay = document.querySelector('.duration-time');
-
-    // Function to format time
-    function formatTime(seconds) {
-        const minutes = Math.floor(seconds / 60);
-        const secs = Math.floor(seconds % 60);
-        return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
-    }
-
-    // Function to update button visibility based on video state
-    function updatePlayPauseButtons() {
-        if (video.paused) {
-            playButton.style.display = 'block';
-            pauseButton.style.display = 'none';
-        } else {
-            playButton.style.display = 'none';
-            pauseButton.style.display = 'block';
-        }
-    }
-
-    // Event listeners
-    video.addEventListener('loadedmetadata', () => {
-        console.log('Metadata loaded');
-        console.log('Duration:', video.duration); // Debugging line
-        durationDisplay.textContent = formatTime(video.duration);
-    });
-
-    video.addEventListener('timeupdate', () => {
-        console.log('Current Time:', video.currentTime); // Debugging line
-        const percent = (video.currentTime / video.duration) * 100;
-        progress.value = percent;
-        currentTimeDisplay.textContent = formatTime(video.currentTime);
-        updatePlayPauseButtons(); // Update buttons on time update
-    });
-
-    playButton.addEventListener('click', () => {
-        video.play();
-        updatePlayPauseButtons();
-    });
-
-    pauseButton.addEventListener('click', () => {
-        video.pause();
-        updatePlayPauseButtons();
-    });
-
-    progress.addEventListener('input', () => {
-        video.currentTime = (progress.value / 100) * video.duration;
-    });
-
-    volumeControl.addEventListener('input', () => {
-        video.volume = volumeControl.value / 100;
-        muteButton.innerHTML = video.muted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
-    });
-
-    muteButton.addEventListener('click', () => {
-        video.muted = !video.muted;
-        muteButton.innerHTML = video.muted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
-    });
-
-    fullscreenButton.addEventListener('click', () => {
-        if (video.requestFullscreen) {
-            video.requestFullscreen();
-        } else if (video.mozRequestFullScreen) {
-            video.mozRequestFullScreen();
-        } else if (video.webkitRequestFullscreen) {
-            video.webkitRequestFullscreen();
-        } else if (video.msRequestFullscreen) {
-            video.msRequestFullscreen();
-        }
-    });
-
-    mirrorButton.addEventListener('click', () => {
-        video.style.transform = video.style.transform === 'scaleX(-1)' ? 'scaleX(1)' : 'scaleX(-1)';
-    });
-
-    document.addEventListener('visibilitychange', () => {
-        if (document.hidden) {
-            video.pause(); // Pause the video when the tab is not active
-        }
-    });
-
-    // Initial call to set button visibility
-    updatePlayPauseButtons();
-});
-
-
-/*messages*/
-
-document.addEventListener("DOMContentLoaded", function() {
-    window.openChat = function(evt, chat) { // Bind to the window object
-        var i, chat_tab, chat_content;
-
-        chat_content = document.getElementById('chat-content');
-        // console.log(chat_content); // Check if this is null
-
-        // if (!chat_content) {
-        //     console.error('Chat content element not found!');
-        //     return; // Exit the function if the element is not found
-        // }
-
-        chat_content.style.display = "flex";
-
-        chat_tab = document.getElementsByClassName('chat-messages-info');
-        for (i = 0; i < chat_tab.length; i++) {
-            chat_tab[i].className = chat_tab[i].className.replace(" active", "");
-        }
-
-        evt.currentTarget.className += " active";
-
-        document.getElementById(chat).style.display = "flex";
-    };
-});
-
-
 
 /*carousel*/
-const tabsBox = document.querySelector(".mentor-carousel-slider-content"),
-      allTabs = tabsBox.querySelectorAll(".carousel-slides"),
-      arrowIcons = document.querySelectorAll(".arrow");
+function InitCarousel() {
+    let isDragging = false;
+    let startX;
+    let scrollLeft
 
-let isDragging = false;
+    const dragStop = (elem) => {
+        isDragging = false; // Stop dragging
+        elem.classList.remove("dragging");
+    };
 
-// Function to handle arrow visibility
-const handleIcons = (scrollVal) => {
-    let maxScrollableWidth = tabsBox.scrollWidth - tabsBox.clientWidth;
-    arrowIcons[0].parentElement.style.display = scrollVal <= 0 ? "flex" : "flex"; // Hide left arrow if at start
-    arrowIcons[1].parentElement.style.display = maxScrollableWidth - scrollVal <= 1 ? "flex" : "flex"; // Hide right arrow if at end
+    const dragging = (elem) => {
+        if (!isDragging) return;
+        const x = window.event.pageX || window.event.touches[0].pageX; // Get current mouse/touch position
+        const walk = (x - startX) * 2; // Calculate distance moved
+        elem.scrollLeft = scrollLeft - walk; // Update scroll position
+
+        console.log(x)
+        console.log(walk)
+    };
+
+    function scrollElem(parent_carousel, direction = "right"){
+        const carousel = parent_carousel.querySelector('[data-carousel]');
+        const clientWidth = carousel.clientWidth;
+        parent_carousel.scrollLeft += direction === "left" ? -clientWidth : clientWidth;
+
+    }
+
+
+    const allCarouselParent = document.querySelectorAll("[data-carousel-parent-elem]");
+
+    
+
+    allCarouselParent.forEach(elem => {
+        const carouselArrows = document.querySelectorAll(`[data-carousel-parent="#${elem.id}"]`);
+        const parent_carousel = elem;
+        const carousel = parent_carousel.querySelector('[data-carousel]');
+
+        
+        parent_carousel.addEventListener("mousedown", (event) => {
+            isDragging = true;
+            startX = event.pageX; 
+            scrollLeft = parent_carousel.scrollLeft;
+            parent_carousel.style.cursor = "grab";
+        });
+        parent_carousel.addEventListener("mousemove", function (){
+            dragging(parent_carousel);
+        });
+        document.addEventListener("mouseup", function (){
+            dragStop(parent_carousel);
+            parent_carousel.style.cursor = "";
+
+        });
+
+        carouselArrows.forEach(function(_arrow){
+            // Initialize ResizeObserver
+
+            const resizeObserver = new ResizeObserver(() => {
+
+                const direction = _arrow.dataset.carouselArrow;
+                // Update scroll on arrow click
+                _arrow.addEventListener("click", function() {
+                    scrollElem(parent_carousel, direction);
+                });
+            });
+            resizeObserver.observe(carousel);
+
+
+        })
+
+        
+
+    });
+
+    
 }
 
-// Arrow click event listeners
-arrowIcons.forEach(icon => {
-    icon.addEventListener("click", () => {
-        // Scroll left or right based on which arrow is clicked
-        let scrollWidth = tabsBox.scrollLeft += icon.id === "carousel-arrow-left" ? -410 : 410;
-        handleIcons(scrollWidth);
-    });
+InitCarousel();
+
+
+/*Graph*/
+
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'line', // Chart type
+    data: {
+        labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+        datasets: [{
+            label: '2Task',
+            data: [1, 2, 1.1, 2.2, 1.5, 2, 1.9], // Data points
+            borderColor: 'black', // Change line color to black
+            backgroundColor: 'rgba(76, 175, 80, 0.2)', // Semi-transparent background
+            borderWidth: 2,
+            pointRadius: 6, // Normal point size
+            pointBackgroundColor: '#546FFF', // Change point background color
+            pointBorderColor: 'white', // Point border color
+            pointHoverRadius: 8, // Increased size on hover
+            tension: 0.4, // Curved segments for a smoother line
+            fill: true // Fill the area under the line
+        }]
+    },
+    options: {
+        responsive: true, // Make the chart responsive
+        maintainAspectRatio: false, // Allow height and width to adjust
+        scales: {
+            y: {
+                beginAtZero: false, // Disable starting at zero
+                min: 1, // Start from 1
+                max: 3, // Maximum value
+                ticks: {
+                    font: {
+                        size: 12,
+                        weight: 'bold',
+                        family: 'Plus Jakarta Sans'
+                    },
+                    stepSize: 1, // Step size for ticks
+                    callback: function(value) {
+                        return Math.round(value); // Round values for display
+                    }
+                },
+                grid: {
+                    display: false // Disable horizontal grid lines
+                }
+            },
+            x: {
+                grid: {
+                    color: 'rgba(0, 0, 0, 0.1)', // Light vertical grid lines
+                    lineWidth: 1 // Line width for better visibility
+                },
+                ticks: {
+                    font: {
+                        size: 12,
+                        weight: 'bold',
+                        family: 'Plus Jakarta Sans'
+                    }
+                }
+            }
+        },
+        plugins: {
+            tooltip: {
+                enabled: true, // Enable tooltips
+                backgroundColor: 'rgba(255, 255, 255, 0.9)', // Tooltip background
+                titleColor: 'black',
+                bodyColor: 'black',
+                borderColor: 'black', // Tooltip border color to match line color
+                borderWidth: 1,
+                caretSize: 5,
+                padding: 10, // Add some padding inside the tooltip
+                displayColors: false // Hide color box in tooltip
+            },
+            afterDatasetsDraw: function(chart) {
+                const ctx = chart.ctx;
+                const dataset = chart.data.datasets[0];
+                
+                ctx.save();
+                ctx.font = 'bold 12px "Plus Jakarta Sans"';
+                ctx.fillStyle = 'black'; // Color of the label text
+
+                dataset.data.forEach((value, index) => {
+                    if (dataset.pointBorderColor[index] !== 'transparent') {
+                        const x = chart.getDatasetMeta(0).data[index].x;
+                        const y = chart.getDatasetMeta(0).data[index].y - 10; // Position the label above the point
+                        ctx.fillText(value.toFixed(1), x, y); // Display actual data values
+                    }
+                });
+
+                ctx.restore();
+            }
+        }
+    }
 });
 
-// Function to set the width of each carousel slide
-const setCarouselSlideWidth = (width) => {
-    allTabs.forEach(tab => {
-        tab.style.setProperty('width', width, 'important'); // Set the desired width with !important
-    });
-};
 
-// Set the width of the carousel slides on page load
-document.addEventListener("DOMContentLoaded", () => {
-    setTimeout(() => {
-        setCarouselSlideWidth('400px'); // Change to your desired width
-    }, 100);
-});
+/*progress bar */
+function createProgressBar(progressContainerId) {
+    const progressContainer = document.getElementById(progressContainerId);
+    const progressBar = progressContainer.querySelector('.progress-bar');
+    const progressIndicator = progressContainer.querySelector('.progress-indicator');
+    const progressText = progressContainer.querySelector('.progress-bar-parag p'); // Select the progress text
 
-// Dragging functionality
-const dragging = (e) => {
-    if (!isDragging) return;
-    tabsBox.classList.add("dragging");
-    tabsBox.scrollLeft -= e.movementX; // Move the scroll based on mouse movement
-    handleIcons(tabsBox.scrollLeft); // Update arrow visibility
+    // Function to update the progress bar based on the percentage value
+    function updateProgressBar(percentage) {
+        percentage = Math.min(Math.max(0, percentage), 100); // Clamp the value between 0 and 100
+        progressBar.style.width = percentage + '%';
+        progressIndicator.style.left = percentage + '%';
+        progressText.textContent = Math.round(percentage) + '%';
+    }
+
+     // Initialize progress from HTML content
+     const initialPercentage = parseInt(progressText.textContent, 10);
+     updateProgressBar(initialPercentage); // Set initial progress based on the HTML
+
+    // Expose a function to set progress
+    return {
+        setProgress: updateProgressBar
+    };
 }
 
-const dragStop = () => {
-    isDragging = false; // Stop dragging
-    tabsBox.classList.remove("dragging");
-}
+// Create progress bar instances
+const progress1 = createProgressBar('progressbar1');
+const progress2 = createProgressBar('progressbar2');
+const progress3 = createProgressBar('progressbar3');
+const progress4 = createProgressBar('progressbar4');
+const progress5 = createProgressBar('progressbar5');
+const progress6 = createProgressBar('progressbar6');
 
-// Mouse event listeners for dragging
-tabsBox.addEventListener("mousedown", () => isDragging = true);
-tabsBox.addEventListener("mousemove", dragging);
-document.addEventListener("mouseup", dragStop);
+
+
+/*calender*/
+        const monthYear = document.getElementById('monthYear');
+        const daysContainer = document.getElementById('daysContainer');
+        const prevWeekButton = document.getElementById('prevWeek');
+        const nextWeekButton = document.getElementById('nextWeek');
+
+        // Start from July 10, 2024
+        let currentDate = new Date(2024, 6, 10); // Month is 0-indexed (0 = January)
+        let activeDate = localStorage.getItem('activeDate') || null; // Get active date from localStorage
+
+        function renderWeek() {
+            // Clear previous days
+            daysContainer.innerHTML = '';
+
+            // Update the month and year in the header
+            monthYear.textContent = currentDate.toLocaleString('default', { month: 'long', year: 'numeric' });
+
+            // Calculate the start of the week (Sunday)
+            const startOfWeek = new Date(currentDate);
+            startOfWeek.setDate(startOfWeek.getDate() - startOfWeek.getDay()); // Set to previous Sunday
+
+            // Render the days from Sunday to Saturday
+            for (let i = 0; i < 7; i++) {
+                const dayDiv = document.createElement('div');
+                const day = new Date(startOfWeek);
+                day.setDate(startOfWeek.getDate() + i);
+                dayDiv.classList.add('day');
+
+                // Create and append day name
+                const dayNameDiv = document.createElement('div');
+                dayNameDiv.classList.add('day-name');
+                dayNameDiv.textContent = day.toLocaleString('default', { weekday: 'long' }).charAt(0).toUpperCase();
+
+
+                // Create and append day date
+                const dayDateDiv = document.createElement('div');
+                dayDateDiv.classList.add('day-date');
+                dayDateDiv.textContent = day.getDate(); // Day number
+
+                // Append day name and date to the day div
+                dayDiv.appendChild(dayNameDiv);
+                dayDiv.appendChild(dayDateDiv);
+
+                // Add click event to change background color
+                dayDiv.addEventListener('click', () => {
+                    // Update active date
+                    activeDate = day.toDateString(); // Store the selected date
+                    localStorage.setItem('activeDate', activeDate); // Save the active date in localStorage
+                    // Remove 'active' class from all days
+                    document.querySelectorAll('.day').forEach(d => d.classList.remove('active'));
+                    // Add 'active' class to the clicked day
+                    dayDiv.classList.add('active');
+                });
+
+                // Set the active class if it's the active date
+                if (activeDate === day.toDateString()) {
+                    dayDiv.classList.add('active');
+                }
+
+                daysContainer.appendChild(dayDiv);
+            }
+        }
+
+        // Navigate to the previous week
+        prevWeekButton.addEventListener('click', () => {
+            currentDate.setDate(currentDate.getDate() - 7);
+            renderWeek();
+        });
+
+        // Navigate to the next week
+        nextWeekButton.addEventListener('click', () => {
+            currentDate.setDate(currentDate.getDate() + 7);
+            renderWeek();
+        });
+
+        // Initial render
+        renderWeek();
+
+

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv = "X-UA-compatible" content = "ie=edge">
+    <title>Figma Design</title>
+    <link rel="stylesheet" type="text/css" href="../css/figma1.css">
+    <link rel="stylesheet" type="text/css" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="side-bar">
+
+        <div class="Hug-text">
+            <div class="huegas-text">
+                <div class="img"><img src="../image/book-square.png"></div>
+                <div class="text"><h1>Nuegas</h1></div>  
+            </div>
+
+            <div class="hug">
+                <a href="overview.html" class="content">
+                    
+                    <div class="image"><img src="../image/category-2.png"></div>
+                    <div class="image-text">
+                        <h1>Overview</h1>
+                    </div>
+                </a><!---end of content-->
+
+                <a href="task.html" class="content">
+                    <!-- <img src="../imagebook.png"> -->
+                    <div class="image"><img src="../image/book.png"></div>
+                    <div class="image-text">
+                        <h1>Tasks</h1>
+                    </div>
+                    
+                </a><!---end of content-->
+
+                <a href="mentor.html" class="content">
+                    <!-- <img src="../imageuser-octagon.png"> -->
+                    <div class="image"><img src="../image/user-octagon.png"></div>
+                    <div class="image-text">
+                        <h1>Mentors</h1>
+                    </div>
+                    
+                </a><!---end of content-->
+
+                <a href="message.html" class="content">
+                    <!-- <img src="../imagemessage.png"> -->
+                    <div class="image"><img src="../image/message.png"></div>
+                    <div class="image-text">
+                        <h1>Message</h1>
+                    </div>
+                    
+                </a><!---end of content-->
+
+                <a href="settings.html" class="content" id="content_active">
+                    <!-- <img src="../imagesetting-2.png"> -->
+                    <div class="image"><img src="../image/setting-2.png"></div>
+                    <div class="image-text">
+                        <h1>Settings</h1>
+                    </div>
+                    
+                </a><!---end of content-->
+            </div>
+
+        </div><!---end of hug-text-->
+
+        <div class="help-center">
+            <div class="question-image"></div>
+            <div class="help-center-content">
+                <h1>Help Center</h1>
+                <p>Having trouble in Learning.Please Contact us for more questions</p>
+            </div>
+
+            <div class="help-center-link">
+                <a href="#"><h1 class="link-header">Go To Help Center</h1></a>
+            </div>
+
+        </div><!--help-center-->
+
+</div><!--sidebar-->
+
+
+     <!--tabcontent-5--> 
+     <div class="tabcontent settings-message" id="content-5">
+        <div class="tabcontent-header">
+            <div class="settings-header">
+                <div class="setting_open">
+                 <img src="../image/menu.png">
+                </div><!--setting_open-->
+
+                <div class="setting_text">
+                    <h1>Settings</h1>
+                </div><!--setting_text-->
+
+            </div><!---settings-header-->
+            <div class="settings-header-content">
+                <a href="#"><img src="../image/notif.png"></a>
+                <a href="#"><img src="../image/Profil.png"></a>
+            </div>
+
+    </div> <!--tabcontent-header-->
+
+    <div class="tabcontent-body">
+
+        <div class="tabcontent-body-header">
+            <div class="tabcontent-body-header-content">
+                <button class="general" onclick="settingsInfo(event, 'gen-content')"  id="defaultOpen">General</button>
+                <button class="general" onclick="settingsInfo(event, 'not-content')">Notification</button>
+            </div>
+        </div><!--tabcontent-body-header-->
+
+<div class="general-tabcontent" id="gen-content">    
+
+        <div class="language">
+            <h1>Language</h1>
+            <div class="language-content">
+                    <form class="lang-select">
+                        <select name="language-selector">
+                            <option value="English">English(Default)</option>
+                            <option value="Yoruba">Yoruba</option>
+                            <option value="hausa">Hausa</option>
+                            <option value="urohobo">Urohobo</option>
+                            <option value="urohobo">Efik</option>
+                            <option value="urohobo">jukun</option>
+                            <option value="urohobo">Ibibio</option>
+                            <option value="urohobo">Akwa Ibom</option>
+                        </select>
+                    </form>
+
+            </div><!--language-content-->
+
+        </div><!--language-->
+
+
+        <div class="language">
+            <h1>Timezone</h1>
+            <div class="language-content">
+                    <form class="lang-select">
+                        <select name="language-selector">
+                            <option value="English">English(Default)</option>
+                            <option value="Yoruba">Yoruba</option>
+                            <option value="hausa">Hausa</option>
+                            <option value="urohobo">Urohobo</option>
+                            <option value="urohobo">Efik</option>
+                            <option value="urohobo">jukun</option>
+                            <option value="urohobo">Ibibio</option>
+                            <option value="urohobo">Akwa Ibom</option>
+                        </select>
+                    </form>
+
+            </div><!--language-content-->
+
+        </div><!--language-->
+
+        <div class="Timezone-radio">
+            <h1>Timezone</h1>
+            <form class="radio"> 
+                <div class="time-zone-12" id="zone-12">
+                    <label for="time-24"><h1>24 Hours</h1></label>
+                    <input type="radio" name="time" value="24 Hours" id="time-24" checked>
+                </div>
+        
+                <div class="time-zone-24" id="zone-24">
+                    <label for="time-12"><h1>12 Hours</h1></label>
+                    <input type="radio" name="time" value="12 Hours" id="time-12">
+                </div>
+            </form>
+        </div>
+        
+
+    <div class="save-changes">
+        <a href="#"><h1>Save Changes</h1></a>
+    </div>
+
+</div><!--gen-tabcontent-->
+
+
+<div class="general-tabcontent" id="not-content">
+
+<div class="switch-toggle">
+
+    <label class="switch">
+        <input type="checkbox" id="flexSwitchCheckDefault">
+        <span class="slider"></span>
+    </label>
+
+    <span class="label-text">Message</span>
+
+</div>
+
+<div class="switch-toggle">
+
+    <label class="switch">
+        <input type="checkbox" id="flexSwitchCheckDefault">
+        <span class="slider"></span>
+    </label>
+
+    <span class="label-text">Task Update</span>
+
+</div>
+
+
+<div class="switch-toggle">
+
+    <label class="switch">
+        <input type="checkbox" id="flexSwitchCheckDefault">
+        <span class="slider"></span>
+    </label>
+
+    <span class="label-text">Task Deadline</span>
+
+</div>
+
+
+<div class="switch-toggle">
+
+    <label class="switch">
+        <input type="checkbox" id="flexSwitchCheckDefault">
+        <span class="slider"></span>
+    </label>
+
+    <span class="label-text">Mentor Help</span>
+
+</div>
+
+
+<div class="save-changes">
+    <a href="#"><h1>Save Changes</h1></a>
+</div>
+
+</div><!--gen-tabcontent-->
+
+
+
+  </div><!--tabcontent-body-->
+
+
+    </div> <!--tabcontent-5-->
+
+<script>
+    function settingsInfo(evt, cont){
+    
+    if (!localStorage.getItem('tabClicked')) {
+        localStorage.setItem('tabClicked', 'true');
+        location.reload(); // Reload the page
+        return;
+    }
+    
+    var i, gen_content, general;
+    gen_content = document.getElementsByClassName('general-tabcontent');
+    for(i=0; i<gen_content.length; i++){
+    gen_content[i].style.display = "none";
+    }
+    
+    general = document.getElementsByClassName('general');
+    for(i=0; i<general.length; i++){
+        general[i].className = general[i].className.replace(" active", "");
+    }
+
+    document.getElementById(cont).style.display = "block";
+    evt.currentTarget.className += " active";
+    
+}
+
+document.getElementById("defaultOpen").click();
+</script>
+</body>
+
+</html>

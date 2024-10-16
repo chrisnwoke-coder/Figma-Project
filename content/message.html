@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv = "X-UA-compatible" content = "ie=edge">
+    <title>Figma Design</title>
+    <link rel="stylesheet" type="text/css" href="../css/figma1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+        <div class="side-bar">
+
+                <div class="Hug-text">
+                    <div class="huegas-text">
+                        <div class="img"><img src="../image/book-square.png"></div>
+                        <div class="text"><h1>Nuegas</h1></div>  
+                    </div>
+
+                    <div class="hug">
+                        <a href="overview.html" class="content">
+                           
+                            <div class="image"><img src="../image/category-2.png"></div>
+                            <div class="image-text">
+                                <h1>Overview</h1>
+                            </div>
+                        </a><!---end of content-->
+
+                        <a href="task.html" class="content">
+                            <!-- <img src="../image/book.png"> -->
+                            <div class="image"><img src="../image/book.png"></div>
+                            <div class="image-text">
+                                <h1>Tasks</h1>
+                            </div>
+                            
+                        </a><!---end of content-->
+
+                        <a href="mentor.html" class="content">
+                            <!-- <img src="../image/user-octagon.png"> -->
+                            <div class="image"><img src="../image/user-octagon.png"></div>
+                            <div class="image-text">
+                                <h1>Mentors</h1>
+                            </div>
+                           
+                        </a><!---end of content-->
+
+                        <a href="message.html" class="content" id="content_active">
+                            <!-- <img src="../image/message.png"> -->
+                            <div class="image"><img src="../image/message.png"></div>
+                            <div class="image-text">
+                                <h1>Message</h1>
+                            </div>
+                           
+                        </a><!---end of content-->
+
+                        <a href="settings.html" class="content">
+                            <!-- <img src="../image/setting-2.png"> -->
+                            <div class="image"><img src="../image/setting-2.png"></div>
+                            <div class="image-text">
+                                <h1>Settings</h1>
+                            </div>
+                            
+                        </a><!---end of content-->
+                    </div>
+
+                </div><!---end of hug-text-->
+
+                <div class="help-center">
+                    <div class="question-image"></div>
+                    <div class="help-center-content">
+                        <h1>Help Center</h1>
+                        <p>Having trouble in Learning.Please Contact us for more questions</p>
+                    </div>
+
+                    <div class="help-center-link">
+                        <a href="#"><h1 class="link-header">Go To Help Center</h1></a>
+                    </div>
+
+                </div><!--help-center-->
+
+        </div><!--sidebar-->
+
+
+    
+            <!--tabcontent-4-->
+            <div class="tabcontent settings" id="content-4">
+                <div class="tabcontent-header">
+                    <div class="settings-header">
+                        <h1>Message</h1>
+                    </div>
+                    <div class="settings-header-content">
+                        <a href="#"><img src="../image/notif.png"></a>
+                        <a href="#"><img src="../image/Profil.png"></a>
+                    </div>
+    
+                 </div> <!--tabcontent-header-->
+    
+                 <div class="tabcontent-body-content">
+                    <div class="chat-layout">
+                        <div class="task-search-form chat">
+                            <form class="form-search">
+                                <div class="search-container">
+                                    <input type="search" placeholder="Search Name">
+                                    <a href="#"><img src="../image/search-normal.png"></a>
+                                </div>
+                            </form>
+                        </div><!--task-search-form chat-->
+    
+                        <div class="chat-messages">
+                            <div class="chat-messages-info" id="chat-1" onclick="openChat(event, 'chat-content')">
+                                <div class="chat-message-text">
+                                    <div class="chat-image image-1"></div>
+                                    <div class="chat-messages-text">
+                                        <div class="chat-messages-header">
+                                            <h3>Angelina Crison</h3>
+                                            <p>1mAgo</p>
+                                        </div>
+                                        <div class="chat-messages-content">
+                                            <p style="font-weight: bolder;">Thank you very much, i'm glad</p>
+                                            <div class="online-signal signal-1"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--chat-messsage-info-->
+                            <div class="horizontal-line">
+                                <!-- <img src="../image/Line.png"> -->
+                            </div><!--horizontal-line-->
+    
+                            <div class="chat-messages-info chat-2">
+                                <div class="chat-message-text">
+                                    <div class="chat-image image-2"></div>
+                                    <div class="chat-messages-text">
+                                        <div class="chat-messages-header">
+                                            <h3>Jacob Saris</h3>
+                                            <p>2mAgo</p>
+                                        </div>
+                                        <div class="chat-messages-content">
+                                            <p>You:sure let me tell you about w..</p>
+                                            <div class="online-signal signal-2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--chat-messsage-info-->
+                            <div class="horizontal-line">
+                                <!-- <img src="../image/Line.png"> -->
+                            </div><!--horizontal-line-->
+    
+                            <div class="chat-messages-info chat-3">
+                                <div class="chat-message-text">
+                                    <div class="chat-image image-3"></div>
+                                    <div class="chat-messages-text">
+                                        <div class="chat-messages-header">
+                                            <h3>Emery Korsgard</h3>
+                                            <p>3mAgo</p>
+                                        </div>
+                                        <div class="chat-messages-content">
+                                            <p style="font-weight: bolder;">Thanks you're very helpful</p>
+                                            <div class="online-signal signal-3"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--chat-messsage-info-->
+                            <div class="horizontal-line">
+                                <!-- <img src="../image/Line.png"> -->
+                            </div><!--horizontal-line-->
+    
+    
+                            <div class="chat-messages-info chat-4">
+                                <div class="chat-message-text">
+                                    <div class="chat-image image-4"></div>
+                                    <div class="chat-messages-text">
+                                        <div class="chat-messages-header">
+                                            <h3>Jeremy Zucker</h3>
+                                            <p>4mAgo</p>
+                                        </div>
+                                        <div class="chat-messages-content">
+                                            <p>You:Sure let me teach you about</p>
+                                            <div class="online-signal signal-4"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--chat-messsage-info-->
+                            <div class="horizontal-line">
+                                <!-- <img src="../image/Line.png"> -->
+                            </div><!--horizontal-line-->
+    
+    
+                            <div class="chat-messages-info chat-5">
+                                <div class="chat-message-text">
+                                    <div class="chat-image image-5"></div>
+                                    <div class="chat-messages-text">
+                                        <div class="chat-messages-header">
+                                            <h3>Nadia Laurem</h3>
+                                            <p>5mAgo</p>
+                                        </div>
+                                        <div class="chat-messages-content">
+                                            <p style="font-weight: bolder;">Is there anything i can help?just...</p>
+                                            <div class="online-signal signal-5"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--chat-messsage-info-->
+                            <div class="horizontal-line">
+                                <!-- <img src="../image/Line.png"> -->
+                            </div><!--horizontal-line-->
+    
+    
+                            <div class="chat-messages-info chat-6">
+                                <div class="chat-message-text">
+                                    <div class="chat-image image-6"></div>
+                                    <div class="chat-messages-text">
+                                        <div class="chat-messages-header">
+                                            <h3>Jason Statham</h3>
+                                            <p>6mAgo</p>
+                                        </div>
+                                        <div class="chat-messages-content">
+                                            <p>You:Let me share about...</p>
+                                            <div class="online-signal signal-6"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--chat-messsage-info-->
+                            <div class="horizontal-line">
+                                <!-- <img src="../image/Line.png"> -->
+                            </div><!--horizontal-line-->
+    
+    
+                            <div class="chat-messages-info chat-7">
+                                <div class="chat-message-text">
+                                    <div class="chat-image image-7"></div>
+                                    <div class="chat-messages-text">
+                                        <div class="chat-messages-header">
+                                            <h3>Angel Kimberly</h3>
+                                            <p>7mAgo</p>
+                                        </div>
+                                        <div class="chat-messages-content">
+                                            <p style="font-weight: bolder;">Okay i know very well about it</p>
+                                            <div class="online-signal signal-7"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--chat-messsage-info-->
+                            <div class="horizontal-line">
+                                <!-- <img src="../image/Line.png"> -->
+                            </div><!--horizontal-line-->
+    
+    
+                            <div class="chat-messages-info chat-8">
+                                <div class="chat-message-text">
+                                    <div class="chat-image image-8"></div>
+                                    <div class="chat-messages-text">
+                                        <div class="chat-messages-header">
+                                            <h3>Jason Momoa</h3>
+                                            <p>7mAgo</p>
+                                        </div>
+                                        <div class="chat-messages-content">
+                                            <p>You: Sure let me tell you about...</p>
+                                            <div class="online-signal signal-8"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--chat-messsage-info-->
+                            <div class="horizontal-line">
+                                <!-- <img src="../image/Line.png"> -->
+                            </div><!--horizontal-line-->
+    
+                            <div class="chat-messages-info chat-9">
+                                <div class="chat-message-text">
+                                    <div class="chat-image image-1"></div>
+                                    <div class="chat-messages-text">
+                                        <div class="chat-messages-header">
+                                            <h3>Revival Diaka</h3>
+                                            <p>1mAgo</p>
+                                        </div>
+                                        <div class="chat-messages-content">
+                                            <p style="font-weight: bolder;">I love you Chris</p>
+                                            <div class="online-signal signal-1"></div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div><!--chat-messsage-info-->
+                            
+    
+                        </div><!--chat-messages-->
+                    </div><!--chat-layout-->
+    
+                    <div class="chat-layout-messages" id="chat-content">
+                        <div class="top-chat-messages">
+                            <div class="chat-menu-info">
+                                <div class="chat-image-pic"></div>
+                                <div class="chat-msg-content">
+                                    <div class="chat-msg-header">
+                                    <h3>Angelina Crison</h3>
+                                    </div>
+                                    <div class="image-chat-icon">
+                                       <div class="image-status"></div>
+                                       <div class="online-status">
+                                           <p>online</p>
+                                       </div>
+                                    </div> 
+                                </div><!--chat-msg-content-->
+                            </div><!--chat-menu-info-->
+                            <div class="chat-menu-icons">
+                                <div class="chat-video-call">
+                                    <div class="chat-video-call-image"></div>
+                                </div>
+                                <div class="chat-audio-call">
+                                    <div class="chat-audio-call-image"></div>
+                                </div>
+                            </div><!--chat-menu-icons-->
+                        </div><!--top-chat-messages-->
+    
+                        <div class="chat-conversations">
+                            <div class="chat-day">
+                                <h3>Today</h3>
+                            </div>
+                            <div class="bubble-chat">
+                                <div class="bubble-colored-chat">
+                                    <div class="bubble-chat-message">
+                                        <p>Morning Angelie, I have question about My Task</p>
+                                    </div>
+                                </div>
+                                <div class="chat-time">
+                                    <p>Today 11:52</p>
+                                </div>
+                            </div><!--bubble-chat-->
+    
+                            <div class="bubble-chat-2">
+                                <div class="replied-chat-content">
+                                    <div class="replied-chat-message">
+                                        <p>Yes sure, Any problem with your assignment?</p>
+                                    </div>
+                                </div>
+                                <div class="replied-chat-time">
+                                    <p>Today 11:53</p>
+                                </div>
+                            </div><!--bubble-chat-2-->
+    
+                            <div class="bubble-chat-3">
+                                <div class="chat-pic-sent"></div>
+                                <div class="chat-msg-sent">
+                                    <p>How to make a responsive display from the dashboard?</p>
+                                </div>
+                            </div><!--bubble-chat-3-->
+    
+                            <div class="bubble-chat-4">
+                                <div class="bubble-chat-4-message">
+                                    <div class="bubble-chat-4-message-content">
+                                        <p>Is there a plugin to do this task?</p>  
+                                    </div>
+                                </div>
+                                <div class="bubble-chat-4-time">
+                                    <p>Today 11:52</p>
+                                </div>
+                            </div><!--bubble-chat-4-->
+    
+                            <div class="bubble-chat-5">
+                                <div class="bubble-chat-5-message">
+                                    <p>No plugins. You just have to make it smaller according to the size of the phone.</p>
+                                </div>
+                            </div><!--bubble-chat-5-->
+    
+                            <div class="bubble-chat-6">
+                                <div class="bubble-chat-6-message">
+                                    <div class="bubble-chat-6-message-content">
+                                        <p>Thank you very much. I'm glad you asked about the assignment</p>
+                                    </div>
+                                </div>
+                                <div class="bubble-chat-6-time">
+                                    <p>Today 11:53</p>
+                                </div>
+                            </div><!--bubble-chat-6-->
+    
+                            <div class="chat-send-message">
+                                <form class="send-message">
+                                    <div class="input-wrapper">
+                                        <input type="text" placeholder="send your message" class="text-send" />
+                                        <span class="send-message-icon">
+                                            <a href="#"><img src="../image/send.png" alt="send"></a>
+                                        </span>
+                                        <span class="send-message-icon-1">
+                                            <a href="#"><img src="../image/go.png" alt="go"></a>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div><!--chat-send-message-->   
+                        </div><!--chat-conversations-->
+    
+                    </div><!--chat-layout-messages-->
+    
+    
+                 </div><!--tabcontent-body-content-->
+    
+            </div><!--tabcontent-4-->
+            <!--tabcontent-4-->
+<script>
+    /*messages*/
+
+document.addEventListener("DOMContentLoaded", function() {
+    window.openChat = function(evt, chat) { // Bind to the window object
+        var i, chat_tab, chat_content;
+
+        chat_content = document.getElementById('chat-content');
+        // console.log(chat_content); // Check if this is null
+
+        // if (!chat_content) {
+        //     console.error('Chat content element not found!');
+        //     return; // Exit the function if the element is not found
+        // }
+
+        chat_content.style.display = "flex";
+
+        chat_tab = document.getElementsByClassName('chat-messages-info');
+        for (i = 0; i < chat_tab.length; i++) {
+            chat_tab[i].className = chat_tab[i].className.replace(" active", "");
+        }
+
+        evt.currentTarget.className += " active";
+
+        document.getElementById(chat).style.display = "flex";
+    };
+});
+
+</script>
+<script type="text/javascript" src="script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv = "X-UA-compatible" content = "ie=edge">
+    <title>Figma Design</title>
+    <link rel="stylesheet" type="text/css" href="../css/figma1.css">
+    <link rel="stylesheet" type="text/css" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+        <div class="side-bar">
+
+                <div class="Hug-text">
+                    <div class="huegas-text">
+                        <div class="img"><img src="../image/book-square.png"></div>
+                        <div class="text"><h1>Nuegas</h1></div>  
+                    </div>
+
+                    <div class="hug">
+                        <a href="overview.html" class="content" id="content_active">
+                           
+                            <div class="image"><img src="../image/category-2.png"></div>
+                            <div class="image-text">
+                                <h1>Overview</h1>
+                            </div>
+                        </a><!---end of content-->
+
+                        <a href="task.html" class="content">
+                            <!-- <img src="../image/book.png"> -->
+                            <div class="image"><img src="../image/book.png"></div>
+                            <div class="image-text">
+                                <h1>Tasks</h1>
+                            </div>
+                            
+                        </a><!---end of content-->
+
+                        <a href="mentor.html" class="content">
+                            <!-- <img src="../image/user-octagon.png"> -->
+                            <div class="image"><img src="../image/user-octagon.png"></div>
+                            <div class="image-text">
+                                <h1>Mentors</h1>
+                            </div>
+                           
+                        </a><!---end of content-->
+
+                        <a href="message.html" class="content">
+                            <!-- <img src="../image/message.png"> -->
+                            <div class="image"><img src="../image/message.png"></div>
+                            <div class="image-text">
+                                <h1>Message</h1>
+                            </div>
+                           
+                        </a><!---end of content-->
+
+                        <a href="settings.html" class="content">
+                            <!-- <img src="../image/setting-2.png"> -->
+                            <div class="image"><img src="../image/setting-2.png"></div>
+                            <div class="image-text">
+                                <h1>Settings</h1>
+                            </div>
+                            
+                        </a><!---end of content-->
+                    </div>
+
+                </div><!---end of hug-text-->
+
+                <div class="help-center">
+                    <div class="question-image"></div>
+                    <div class="help-center-content">
+                        <h1>Help Center</h1>
+                        <p>Having trouble in Learning.Please Contact us for more questions</p>
+                    </div>
+
+                    <div class="help-center-link">
+                        <a href="#"><h1 class="link-header">Go To Help Center</h1></a>
+                    </div>
+
+                </div><!--help-center-->
+
+        </div><!--sidebar-->
+
+
+
+        <!----tabcontent-1-->
+        <div class="tabcontent overview" id="content-1">
+            <div class="overview-content">
+                <div class="overview-header">
+                    <div class="overview-header-content">
+                        <h1>Hi, Skylar Dias</h1>
+                        <p>Let's finish your task today!</p>
+                    </div><!--overview-header-content-->
+
+                    <div class="settings-header-content overview-header-icons">
+                        <a href="#"><img src="../image/notif.png"></a>
+                        <a href="#"><img src="../image/Profil.png"></a>
+                    </div>
+                </div><!--overview-header-->
+
+                <div class="overview-content-1">
+
+                    <div class="running-task">
+                        <div class="running-task-header">
+                            <h3>Running Task</h3>
+                        </div>
+                        <div class="running-task-number">
+                            <h3>65</h3>
+                        </div>
+
+                        <div class="run-number-task">
+                            <div class="number-task-content">
+                                <div class="circular-progress">
+                                    <svg>
+                                        <defs>
+                                            <filter id="shadow">
+                                                <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="rgba(0, 0, 0, 0.5)" />
+                                            </filter>
+                                        </defs>
+
+                                        <circle cx="30" cy="30" r="27" filter="url(#shadow)" stroke="#141522" stroke-width="2" fill="none"  />
+                                        <circle cx="30" cy="30" r="27" stroke="#ccc" stroke-width="2" fill="none"  id="progressCircle" />
+                                    </svg>
+                                    <div class="percentage" id="progressText">45%</div>
+                                </div>
+                            </div>
+                            <div class="number-task-content">
+                                <h3>100</h3>
+                                <p>Task</p>
+                            </div>
+                        </div><!--run-number-task-->
+
+                    </div><!--running-task-->
+
+                    <div class="running-task">
+                        <div class="running-task-activity">
+                            <h3>Activity</h3>
+
+                            <div class=".running-task-activity-form">
+                                <form class="lang-select week-select">
+                                    <select name="language-selector week-selector">
+                                        <option value="English">This week</option>
+                                        <option value="Yoruba">Monday</option>
+                                        <option value="hausa">Tuesday</option>
+                                        <option value="urohobo">Wednesday</option>
+                                        <option value="urohobo">Thursday</option>
+                                        <option value="urohobo">Friday</option>
+                                        <option value="urohobo">Saturday</option>
+                                        <option value="urohobo">Sunday</option>
+                                    </select>
+                                </form>
+                            </div><!--.running-task-activity-form-->
+                        </div><!---running-task-activity-->
+
+
+                        <div class="running-task-activity">
+                            <canvas id="myChart"></canvas>
+                        </div><!---running-task-activity-->
+
+                    </div><!--running-task-->
+
+                </div><!--overview-content-1-->
+
+
+                <div class="overview-content-2">
+                    <div class="overview-mentor-header">
+                        <div class="overview-mentor-header-content">
+                             <h3>Monthly Mentors</h3>
+                        </div>
+
+                        <div class="overview-header-icons">
+                            <div data-carousel-parent="#monthly_mentors" data-carousel-arrow="left" class="arrow" id="carousel-arrow-left"></div>
+                            <div data-carousel-parent="#monthly_mentors" data-carousel-arrow="right" class="arrow" id="carousel-arrow-right"></div>
+                        </div>
+                    </div><!---overview-mentor-header-->
+
+
+                    <div class="mentor-carousel-slider">
+                        <div data-carousel-parent-elem id="monthly_mentors" class="mentor-carousel-slider-content overview-carousel">
+                            <div data-carousel class="w328px">
+                                <div  class="carousel-slides zoverview-slider">
+                                    <div class="carousel-slides-content">
+                                        <div class="carousel-content">
+                                            <div class="carousel-image carousel-1"></div>
+                                            <div class="carousel-header">
+                                                <h3>Jessica Jane</h3>
+                                                <p>Web Developer</p>
+                                            </div>
+                                        </div><!--carousel-content-->
+        
+                                        <div class="carousel-content">
+                                            <p><a href="#">+Follow</a></p>
+                                        </div><!--carousel-content-->
+                                    </div><!---carousel-slides-content-->
+        
+                                    <div class="carousel-slides-content">
+                                        <div class="carousel-task">
+                                            <div class="carousel-note note-1"></div>
+                                            <div class="carousel-task-content">
+                                                <p>40 Task</p>
+                                            </div>
+                                        </div><!--carousel-task-->
+                                        <div class="carousel-review">
+                                            <div class="carousel-note note-2"></div>
+                                            <div class="carousel-review-content">
+                                                <p>4.7(750 reviews)</p>
+                                            </div>
+                                        </div><!--carousel-review-->
+                                    </div><!---carousel-slides-content-->
+                                </div><!--carousel-slides-->
+                            </div>
+                            
+                            <div  data-carousel class="w328px">
+                                <div class="carousel-slides">
+                                    <div class="carousel-slides-content">
+                                        <div class="carousel-content">
+                                            <div class="carousel-image carousel-2"></div>
+                                            <div class="carousel-header">
+                                                <h3>Abraham Lincoln</h3>
+                                                <p>3D Design</p>
+                                            </div>
+                                        </div><!--carousel-content-->
+        
+                                        <div class="carousel-content">
+                                            <p>Followed</p>
+                                        </div><!--carousel-content-->
+                                    </div><!---carousel-slides-content-->
+        
+                                    <div class="carousel-slides-content">
+                                        <div class="carousel-task">
+                                            <div class="carousel-note note-1"></div>
+                                            <div class="carousel-task-content">
+                                                <p>40 Task</p>
+                                            </div>
+                                        </div><!--carousel-task-->
+                                        <div class="carousel-review">
+                                            <div class="carousel-note note-2"></div>
+                                            <div class="carousel-review-content">
+                                                <p>4.7(750 reviews)</p>
+                                            </div>
+                                        </div><!--carousel-review-->
+                                    </div><!---carousel-slides-content-->
+                                </div><!--carousel-slides-->
+                            </div>
+                            
+                            <div  data-carousel class="w328px">
+                                <div class="carousel-slides">
+                                    <div class="carousel-slides-content">
+                                        <div class="carousel-content">
+                                            <div class="carousel-image carousel-3"></div>
+                                            <div class="carousel-header">
+                                                <h3>Curious George</h3>
+                                                <p>UI/UX Design</p>
+                                            </div>
+                                        </div><!--carousel-content-->
+        
+                                        <div class="carousel-content">
+                                            <p><a href="#">+Follow</a></p>
+                                        </div><!--carousel-content-->
+                                    </div><!---carousel-slides-content-->
+        
+                                    <div class="carousel-slides-content">
+                                        <div class="carousel-task">
+                                            <div class="carousel-note note-1"></div>
+                                            <div class="carousel-task-content">
+                                                <p>40 Task</p>
+                                            </div>
+                                        </div><!--carousel-task-->
+                                        <div class="carousel-review">
+                                            <div class="carousel-note note-2"></div>
+                                            <div class="carousel-review-content">
+                                                <p>4.7(750 reviews)</p>
+                                            </div>
+                                        </div><!--carousel-review-->
+                                    </div><!---carousel-slides-content-->
+                                </div><!--carousel-slides-->
+                            </div>
+                            
+                            <div  data-carousel class="w328px">
+                                <div class="carousel-slides">
+                                    <div class="carousel-slides-content">
+                                        <div class="carousel-content">
+                                            <div class="carousel-image carousel-4"></div>
+                                            <div class="carousel-header">
+                                                <h3>Felicia Deborah</h3>
+                                                <p>Cybersecurity</p>
+                                            </div>
+                                        </div><!--carousel-content-->
+        
+                                        <div class="carousel-content">
+                                            <p>Followed</p>
+                                        </div><!--carousel-content-->
+                                    </div><!---carousel-slides-content-->
+        
+                                    <div class="carousel-slides-content">
+                                        <div class="carousel-task">
+                                            <div class="carousel-note note-1"></div>
+                                            <div class="carousel-task-content">
+                                                <p>40 Task</p>
+                                            </div>
+                                        </div><!--carousel-task-->
+                                        <div class="carousel-review">
+                                            <div class="carousel-note note-2"></div>
+                                            <div class="carousel-review-content">
+                                                <p>4.7(750 reviews)</p>
+                                            </div>
+                                        </div><!--carousel-review-->
+                                    </div><!---carousel-slides-content-->
+                                </div><!--carousel-slides-->
+                            </div>
+                            
+                            <div  data-carousel class="w328px">
+                                <div class="carousel-slides">
+                                    <div class="carousel-slides-content">
+                                        <div class="carousel-content">
+                                            <div class="carousel-image carousel-5"></div>
+                                            <div class="carousel-header">
+                                                <h3>Damian Blaise</h3>
+                                                <p>DevOps</p>
+                                            </div>
+                                        </div><!--carousel-content-->
+        
+                                        <div class="carousel-content">
+                                            <p><a href="#">+Follow</a></p>
+                                        </div><!--carousel-content-->
+                                    </div><!---carousel-slides-content-->
+        
+                                    <div class="carousel-slides-content">
+                                        <div class="carousel-task">
+                                            <div class="carousel-note note-1"></div>
+                                            <div class="carousel-task-content">
+                                                <p>40 Task</p>
+                                            </div>
+                                        </div><!--carousel-task-->
+                                        <div class="carousel-review">
+                                            <div class="carousel-note note-2"></div>
+                                            <div class="carousel-review-content">
+                                                <p>4.7(750 reviews)</p>
+                                            </div>
+                                        </div><!--carousel-review-->
+                                    </div><!---carousel-slides-content-->
+                                </div><!--carousel-slides-->
+                            </div>
+                            
+                            <div  data-carousel class="w328px">
+                                <div class="carousel-slides">
+                                    <div class="carousel-slides-content">
+                                        <div class="carousel-content">
+                                            <div class="carousel-image carousel-6"></div>
+                                            <div class="carousel-header">
+                                                <h3>Okiki Emmanuel</h3>
+                                                <p>FullStack</p>
+                                            </div>
+                                        </div><!--carousel-content-->
+        
+                                        <div class="carousel-content">
+                                            <p>Followed</p>
+                                        </div><!--carousel-content-->
+                                    </div><!---carousel-slides-content-->
+        
+                                    <div class="carousel-slides-content">
+                                        <div class="carousel-task">
+                                            <div class="carousel-note note-1"></div>
+                                            <div class="carousel-task-content">
+                                                <p>40 Task</p>
+                                            </div>
+                                        </div><!--carousel-task-->
+                                        <div class="carousel-review">
+                                            <div class="carousel-note note-2"></div>
+                                            <div class="carousel-review-content">
+                                                <p>4.7(750 reviews)</p>
+                                            </div>
+                                        </div><!--carousel-review-->
+                                    </div><!---carousel-slides-content-->
+                                </div><!--carousel-slides-->
+                            </div>
+
+                            <div  data-carousel class="w328px">
+                                <div class="carousel-slides">
+                                    <div class="carousel-slides-content">
+                                        <div class="carousel-content">
+                                            <div class="carousel-image carousel-7"></div>
+                                            <div class="carousel-header">
+                                                <h3>Afeez Mayowa</h3>
+                                                <p>Cybersecurity</p>
+                                            </div>
+                                        </div><!--carousel-content-->
+        
+                                        <div class="carousel-content">
+                                            <p><a href="#">+Follow</a></p>
+                                        </div><!--carousel-content-->
+                                    </div><!---carousel-slides-content-->
+        
+                                    <div class="carousel-slides-content">
+                                        <div class="carousel-task">
+                                            <div class="carousel-note note-1"></div>
+                                            <div class="carousel-task-content">
+                                                <p>40 Task</p>
+                                            </div>
+                                        </div><!--carousel-task-->
+                                        <div class="carousel-review">
+                                            <div class="carousel-note note-2"></div>
+                                            <div class="carousel-review-content">
+                                                <p>4.7(750 reviews)</p>
+                                            </div>
+                                        </div><!--carousel-review-->
+                                    </div><!---carousel-slides-content-->
+                                </div><!--carousel-slides-->
+                            </div>
+                            
+                            <div  data-carousel class="w328px">
+                                <div class="carousel-slides">
+                                    <div class="carousel-slides-content">
+                                        <div class="carousel-content">
+                                            <div class="carousel-image carousel-8"></div>
+                                            <div class="carousel-header">
+                                                <h3>Daniel Megasan</h3>
+                                                <p>IT-Student</p>
+                                            </div>
+                                        </div><!--carousel-content-->
+        
+                                        <div class="carousel-content">
+                                            <p>Followed</p>
+                                        </div><!--carousel-content-->
+                                    </div><!---carousel-slides-content-->
+        
+                                    <div class="carousel-slides-content">
+                                        <div class="carousel-task">
+                                            <div class="carousel-note note-1"></div>
+                                            <div class="carousel-task-content">
+                                                <p>40 Task</p>
+                                            </div>
+                                        </div><!--carousel-task-->
+                                        <div class="carousel-review">
+                                            <div class="carousel-note note-2"></div>
+                                            <div class="carousel-review-content">
+                                                <p>4.7(750 reviews)</p>
+                                            </div>
+                                        </div><!--carousel-review-->
+                                    </div><!---carousel-slides-content-->
+                                </div><!--carousel-slides-->
+                            </div>
+    
+                        </div><!--mentor-carousel-slider-content-->
+                    </div><!--mentor-carousel-slider-->
+
+
+                </div><!--overview-content-2-->
+
+                <div class="overview-content-3">
+                    <div class="overview-mentor-header">
+                        <div class="overview-mentor-header-content">
+                             <h3>Upcoming Tasks</h3>
+                        </div>
+
+                        <div class="overview-header-icons">
+                            <div data-carousel-parent="#upcoming_task" data-carousel-arrow="left"  class="arrow" id="carousel-left"></div>
+                            <div data-carousel-parent="#upcoming_task" data-carousel-arrow="right"  class="arrow" id="carousel-right"></div>
+                        </div>
+                    </div><!---overview-mentor-header-->
+                    
+                    <div data-carousel-parent-elem id="upcoming_task" class="overview-slider-task">
+                        
+                        <div data-carousel class="upcoming_carousel_slider">
+                            <div class="overview-content-3-slider-content">
+                               <div class="slider-content-3">
+                                    <div class="slider-content-3-pic content-pic-1"></div>
+                                    <div class="slider-content-3-header">
+                                        <div class="slider-content-3-header-content">
+                                            <h3>Creating Mobile App Design</h3>
+                                        </div><!--slider-content-3-header-content-->
+                                        <div class="slider-content-3-paragraph">
+                                            <p>UI/UX Design</p>
+                                        </div><!---slider-content-3-paragraph-->
+                                    </div><!---slider-content-3-header-->
+    
+                                    <div class="slider-content-3-progressbar" id="progressbar1">
+                                        <div class="progressbar-header">
+                                            <div class="progress-bar-header-text">
+                                                <h3>Progress</h3>
+                                            </div>
+                                            <div class="progress-bar-parag">
+                                                <p>75%</p>
+                                            </div>
+                                        </div><!--progressbar-header-->
+                                        <div class="progress-container" id="progressContainer">
+                                            <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
+                                            <div class="progress-indicator" id="progressIndicator" draggable="true"></div>
+                                        </div><!---progress-container-->
+                                    </div><!--slider-content-3-progressbar-->
+    
+                                    <div class="slider-date-pic">
+                                        <div class="slider-date">
+                                            <div class="slider-icon"></div>
+                                            <div class="slider-icon-date">
+                                               <p>3DaysLeft</p> 
+                                            </div>
+                                        </div><!---slider-date-->
+                                        <div class="slider-image-gallery">
+                                            <div class="pic pic-1"></div>
+                                            <div class="pic pic-2"></div>
+                                            <div class="pic pic-3"></div>
+                                            <div class="pic pic-4"></div>
+                                            <div class="pic pic-5"></div>
+                                        </div><!--slider-image-gallery-->
+    
+                                    </div><!---slider-date-pic-->
+                               </div><!---slider-content-3-->
+                            </div><!---overview-content-3-slider-content-->
+                        </div><!---upcoming_carousel_slider-->
+
+                        <div data-carousel class="upcoming_carousel_slider">
+                            <div class="overview-content-3-slider-content">
+                                <div class="slider-content-3">
+                                    <div class="slider-content-3-pic content-pic-2"></div>
+                                    <div class="slider-content-3-header">
+                                        <div class="slider-content-3-header-content">
+                                            <h3>Creating Perfect Websites</h3>
+                                        </div><!--slider-content-3-header-content-->
+                                        <div class="slider-content-3-paragraph">
+                                            <p>Web Developer</p>
+                                        </div><!---slider-content-3-paragraph-->
+                                    </div><!---slider-content-3-header-->
+    
+                                    <div class="slider-content-3-progressbar" id="progressbar2">
+                                        <div class="progressbar-header">
+                                            <div class="progress-bar-header-text">
+                                                <h3>Progress</h3>
+                                            </div>
+                                            <div class="progress-bar-parag">
+                                                <p>85%</p>
+                                            </div>
+                                        </div><!--progressbar-header-->
+                                        <div class="progress-container" id="progressContainer">
+                                            <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
+                                            <div class="progress-indicator" id="progressIndicator" draggable="true"></div>
+                                        </div><!---progress-container-->
+                                    </div><!--slider-content-3-progressbar-->
+    
+                                    <div class="slider-date-pic">
+                                        <div class="slider-date">
+                                            <div class="slider-icon"></div>
+                                            <div class="slider-icon-date">
+                                                <p>4DaysLeft</p> 
+                                            </div>
+                                        </div><!---slider-date-->
+                                        <div class="slider-image-gallery">
+                                            <div class="pic pic-1"></div>
+                                            <div class="pic pic-2"></div>
+                                            <div class="pic pic-3"></div>
+                                            <div class="pic pic-4"></div>
+                                            <div class="pic pic-5"></div>
+                                        </div><!--slider-image-gallery-->
+    
+                                    </div><!---slider-date-pic-->
+                                </div><!---slider-content-3-->
+                            </div><!---overview-content-3-slider-content-->
+                         </div><!---upcoming_carousel_slider-->
+
+                        <div data-carousel class="upcoming_carousel_slider">
+                            <div class="overview-content-3-slider-content">
+                                <div class="slider-content-3">
+                                     <div class="slider-content-3-pic content-pic-3"></div>
+                                     <div class="slider-content-3-header">
+                                         <div class="slider-content-3-header-content">
+                                             <h3>Creating Mobile App Design</h3>
+                                         </div><!--slider-content-3-header-content-->
+                                         <div class="slider-content-3-paragraph">
+                                             <p>UI/UX Design</p>
+                                         </div><!---slider-content-3-paragraph-->
+                                     </div><!---slider-content-3-header-->
+     
+                                     <div class="slider-content-3-progressbar" id="progressbar3">
+                                         <div class="progressbar-header">
+                                             <div class="progress-bar-header-text">
+                                                 <h3>Progress</h3>
+                                             </div>
+                                             <div class="progress-bar-parag">
+                                                 <p>91%</p>
+                                             </div>
+                                         </div><!--progressbar-header-->
+                                         <div class="progress-container" id="progressContainer">
+                                             <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
+                                             <div class="progress-indicator" id="progressIndicator" draggable="true"></div>
+                                         </div><!---progress-container-->
+                                     </div><!--slider-content-3-progressbar-->
+     
+                                     <div class="slider-date-pic">
+                                         <div class="slider-date">
+                                             <div class="slider-icon"></div>
+                                             <div class="slider-icon-date">
+                                                <p>3DaysLeft</p> 
+                                             </div>
+                                         </div><!---slider-date-->
+                                         <div class="slider-image-gallery">
+                                             <div class="pic pic-1"></div>
+                                             <div class="pic pic-2"></div>
+                                             <div class="pic pic-3"></div>
+                                             <div class="pic pic-4"></div>
+                                             <div class="pic pic-5"></div>
+                                         </div><!--slider-image-gallery-->
+     
+                                     </div><!---slider-date-pic-->
+                                </div><!---slider-content-3-->
+                             </div><!---overview-content-3-slider-content-->
+                        </div><!---upcoming_carousel_slider-->
+                        
+                        <div data-carousel class="upcoming_carousel_slider">
+                            <div class="overview-content-3-slider-content">
+                                <div class="slider-content-3">
+                                     <div class="slider-content-3-pic content-pic-1"></div>
+                                     <div class="slider-content-3-header">
+                                         <div class="slider-content-3-header-content">
+                                             <h3>Creating Mobile App Design</h3>
+                                         </div><!--slider-content-3-header-content-->
+                                         <div class="slider-content-3-paragraph">
+                                             <p>UI/UX Design</p>
+                                         </div><!---slider-content-3-paragraph-->
+                                     </div><!---slider-content-3-header-->
+     
+                                     <div class="slider-content-3-progressbar" id="progressbar4">
+                                         <div class="progressbar-header">
+                                             <div class="progress-bar-header-text">
+                                                 <h3>Progress</h3>
+                                             </div>
+                                             <div class="progress-bar-parag">
+                                                 <p>64%</p>
+                                             </div>
+                                         </div><!--progressbar-header-->
+                                         <div class="progress-container" id="progressContainer">
+                                             <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
+                                             <div class="progress-indicator" id="progressIndicator" draggable="true"></div>
+                                         </div><!---progress-container-->
+                                     </div><!--slider-content-3-progressbar-->
+     
+                                     <div class="slider-date-pic">
+                                         <div class="slider-date">
+                                             <div class="slider-icon"></div>
+                                             <div class="slider-icon-date">
+                                                <p>3DaysLeft</p> 
+                                             </div>
+                                         </div><!---slider-date-->
+                                         <div class="slider-image-gallery">
+                                             <div class="pic pic-1"></div>
+                                             <div class="pic pic-2"></div>
+                                             <div class="pic pic-3"></div>
+                                             <div class="pic pic-4"></div>
+                                             <div class="pic pic-5"></div>
+                                         </div><!--slider-image-gallery-->
+     
+                                     </div><!---slider-date-pic-->
+                                </div><!---slider-content-3-->
+                             </div><!---overview-content-3-slider-content-->
+                        </div><!---upcoming_carousel_slider-->
+
+                        
+                        <div data-carousel class="upcoming_carousel_slider">
+                            <div class="overview-content-3-slider-content">
+                                <div class="slider-content-3">
+                                     <div class="slider-content-3-pic content-pic-1"></div>
+                                     <div class="slider-content-3-header">
+                                         <div class="slider-content-3-header-content">
+                                             <h3>Creating Mobile App Design</h3>
+                                         </div><!--slider-content-3-header-content-->
+                                         <div class="slider-content-3-paragraph">
+                                             <p>UI/UX Design</p>
+                                         </div><!---slider-content-3-paragraph-->
+                                     </div><!---slider-content-3-header-->
+     
+                                     <div class="slider-content-3-progressbar" id="progressbar5">
+                                         <div class="progressbar-header">
+                                             <div class="progress-bar-header-text">
+                                                 <h3>Progress</h3>
+                                             </div>
+                                             <div class="progress-bar-parag">
+                                                 <p>78%</p>
+                                             </div>
+                                         </div><!--progressbar-header-->
+                                         <div class="progress-container" id="progressContainer">
+                                             <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
+                                             <div class="progress-indicator" id="progressIndicator" draggable="true"></div>
+                                         </div><!---progress-container-->
+                                     </div><!--slider-content-3-progressbar-->
+     
+                                     <div class="slider-date-pic">
+                                         <div class="slider-date">
+                                             <div class="slider-icon"></div>
+                                             <div class="slider-icon-date">
+                                                <p>3DaysLeft</p> 
+                                             </div>
+                                         </div><!---slider-date-->
+                                         <div class="slider-image-gallery">
+                                             <div class="pic pic-1"></div>
+                                             <div class="pic pic-2"></div>
+                                             <div class="pic pic-3"></div>
+                                             <div class="pic pic-4"></div>
+                                             <div class="pic pic-5"></div>
+                                         </div><!--slider-image-gallery-->
+     
+                                     </div><!---slider-date-pic-->
+                                </div><!---slider-content-3-->
+                             </div><!---overview-content-3-slider-content-->
+                        </div><!---upcoming_carousel_slider-->
+
+                    </div><!---overview-slider-task-->
+
+                </div><!--overview-content-3-->
+
+            </div><!--overview-content-->
+
+
+            <div class="overview-content">
+
+                <div class="calendar">
+                    <div class="calender_header">
+                        <div id="prevWeek" class="nav-button"></div>
+                        <h2 id="monthYear">July 2024</h2>
+                        <div id="nextWeek" class="nav-button"></div>
+                    </div>
+                    <div class="days-container-wrapper">
+                        <div class="days" id="daysContainer"></div>
+                    </div>
+                </div><!--calender--->
+
+                <div class="overview_task_today">
+
+                    <div class="overview-mentor-header task_today_header">
+
+                        <div class="overview-mentor-header-content task_today_header_content">
+                             <h3>Today Tasks</h3>
+                        </div>
+
+                        <div class="overview-header-icons task_today_icons"> 
+                            <a href="#"><img src="../image/more.png"></a>  
+                        </div><!---overview-header-icons-->
+
+                    </div><!---overview-mentor-header-->
+
+                    <div data-carousel class="upcoming_carousel_slider">
+                        <div class="overview-content-3-slider-content">
+                            <div class="slider-content-3 task_today">
+                                 <div class="slider-content-3-pic content-pic-3"></div>
+                                 <div class="slider-content-3-header">
+                                     <div class="slider-content-3-header-content">
+                                         <h3>Creating Mobile App Design</h3>
+                                     </div><!--slider-content-3-header-content-->
+                                     <div class="slider-content-3-paragraph">
+                                         <p>UI/UX Design</p>
+                                     </div><!---slider-content-3-paragraph-->
+                                 </div><!---slider-content-3-header-->
+ 
+                                 <div class="slider-content-3-progressbar" id="progressbar6">
+                                     <div class="progressbar-header">
+                                         <div class="progress-bar-header-text">
+                                             <h3>Progress</h3>
+                                         </div>
+                                         <div class="progress-bar-parag">
+                                             <p>90%</p>
+                                         </div>
+                                     </div><!--progressbar-header-->
+                                     <div class="progress-container" id="progressContainer">
+                                         <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
+                                         <div class="progress-indicator" id="progressIndicator" draggable="true"></div>
+                                     </div><!---progress-container-->
+                                 </div><!--slider-content-3-progressbar-->
+ 
+                                 <div class="slider-date-pic">
+                                     <div class="slider-date">
+                                         <div class="slider-icon"></div>
+                                         <div class="slider-icon-date">
+                                            <p>1Hour</p> 
+                                         </div>
+                                     </div><!---slider-date-->
+                                     
+                                     <div class="slider-image-gallery">
+                                         <div class="pic pic-1"></div>
+                                         <div class="pic pic-2"></div>
+                                         <div class="pic pic-3"></div>
+                                         <div class="pic pic-4"></div>
+                                         <div class="pic pic-5"></div>
+                                     </div><!--slider-image-gallery-->
+ 
+                                 </div><!---slider-date-pic-->
+                            </div><!---slider-content-3-->
+                         </div><!---overview-content-3-slider-content-->
+                    </div><!---upcoming_carousel_slider-->
+
+                    <div class="overview_task_line">
+                        <img src="../image/Line.png">
+                    </div><!--task_today_line-->
+
+                    <div class="overview_detail_task_designer">
+                        <div class="overview_designer_detail">
+                            <h3>Detail Task</h3>
+                        </div><!--overview_designer_detail-->
+
+                        <div class="overview_task_title">
+                            <p>UI/UX Designer</p>
+                        </div><!---overview_task_title-->
+                    </div><!---overview_detail_task_designer-->
+
+                    <div class="overview_hug_detail">
+                        <div class="overview_hug_number">
+                            <p>1</p>
+                        </div><!---overview_hug_number-->
+
+                        <div class="overview_hug_text">
+                            <p>Understanding the tools in Figma</p>
+                        </div><!---overview_hug_text-->
+
+                    </div><!---overview_hug_detail-->
+
+                    
+                    <div class="overview_hug_detail">
+                        <div class="overview_hug_number">
+                            <p>2</p>
+                        </div><!---overview_hug_number-->
+
+                        <div class="overview_hug_text">
+                            <p>Understanding the basics in Making Designs</p>
+                        </div><!---overview_hug_text-->
+
+                    </div><!---overview_hug_detail-->
+
+                    
+                    <div class="overview_hug_detail">
+                        <div class="overview_hug_number">
+                            <p>3</p>
+                        </div><!---overview_hug_number-->
+
+                        <div class="overview_hug_text">
+                            <p>Understanding Mobile Application with Figma</p>
+                        </div><!---overview_hug_text-->
+
+                    </div><!---overview_hug_detail-->
+
+
+                    <div class="overview_go_to_detail">
+                        <a href="#">
+                            <p>Go to detail</p>
+                        </a>
+                    </div><!---overview_go_to_detail-->
+
+                </div><!---overview_task_today-->
+                 
+            </div><!--overview-content-->
+
+
+        </div><!---tabcontent-1-->
+        <!----tabcontent-1-->
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script type="text/javascript" src="../script/script.js"></script>
+    </body>
+</html>
