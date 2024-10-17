@@ -1,10 +1,101 @@
 @media screen and (max-width: 1200px) {
-    .side-bar{
-        display: none;
-    }
-
-    .settings-message{
-        width: 100%;
-    }
+.side-bar{
+    display: none;
 }
 
+.Nuegas_header{
+    justify-content: space-between;
+}
+
+.Hug-text{
+    width: 230px;
+}
+
+.content{
+    gap: 20px;
+}
+
+.image{
+    left: 30px;
+}
+
+.image-text{
+    left: 75px;
+}
+
+.closebtn{
+    display: flex;
+    cursor: pointer;
+}
+
+.help-center{
+    margin: 0 auto;
+    display: none !important;
+}
+
+.settings-message{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.tabcontent-settings-header{
+    height: auto;
+    gap: 35px;
+    padding-bottom: 20px;
+
+}
+
+.setting_open{
+    display: flex;
+}
+
+.setting_text{
+    display: none;
+}
+
+.display_text{
+    display: flex;
+}
+
+}
+
+@media screen and (max-width: 700px) {
+.Hug-text{
+    width: 150px;
+}
+
+.image{
+    left: 20px;
+}
+
+.image-text{
+    left: 55px;
+}
+
+.setting_open{
+    width: 24px;
+    height: 24px;
+}
+
+.closebtn{
+    width: 15px;
+    height: 15px;
+}
+
+.tabcontent-body-header{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.save-changes{
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+.tabcontent-body{
+    height: 700px;
+}
+    
+}

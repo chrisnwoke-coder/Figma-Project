@@ -12,13 +12,17 @@
 </head>
 <body>
 
-<div class="side-bar">
+<div class="side-bar" id="side_bar">
 
         <div class="Hug-text">
-            <div class="huegas-text">
-                <div class="img"><img src="../image/book-square.png"></div>
-                <div class="text"><h1>Nuegas</h1></div>  
-            </div>
+
+            <div class="Nuegas_header">
+                <div class="huegas-text">
+                    <div class="img"><img src="../image/book-square.png"></div>
+                    <div class="text"><h1>Nuegas</h1></div> 
+                </div>
+                <div class="closebtn" onclick="closeNav()"></div> 
+            </div><!--Nugas_header-->
 
             <div class="hug">
                 <a href="overview.html" class="content">
@@ -86,23 +90,31 @@
 
      <!--tabcontent-5--> 
      <div class="tabcontent settings-message" id="content-5">
-        <div class="tabcontent-header">
-            <div class="settings-header">
-                <div class="setting_open">
-                 <img src="../image/menu.png">
-                </div><!--setting_open-->
+        <div class="tabcontent-settings-header">
+            <div class="tabcontent-header">
+                <div class="settings-header">
+                    <div class="setting_open" onclick="openNav()">
+                    <img src="../image/menu.png">
+                    </div><!--setting_open-->
 
-                <div class="setting_text">
-                    <h1>Settings</h1>
-                </div><!--setting_text-->
+                    <div class="setting_text">
+                        <h1>Settings</h1>
+                    </div><!--setting_text-->
 
-            </div><!---settings-header-->
-            <div class="settings-header-content">
-                <a href="#"><img src="../image/notif.png"></a>
-                <a href="#"><img src="../image/Profil.png"></a>
+                </div><!---settings-header-->
+
+                <div class="settings-header-content">
+                    <a href="#"><img src="../image/notif.png"></a>
+                    <a href="#"><img src="../image/Profil.png"></a>
+                </div>
+
+            </div> <!--tabcontent-header-->
+
+            <div class="display_text">
+                <h3>Settings</h3>
             </div>
-
-    </div> <!--tabcontent-header-->
+            
+        </div><!---tabcontent-settings-header-->
 
     <div class="tabcontent-body">
 
@@ -113,126 +125,126 @@
             </div>
         </div><!--tabcontent-body-header-->
 
-<div class="general-tabcontent" id="gen-content">    
+        <div class="general-tabcontent" id="gen-content">    
 
-        <div class="language">
-            <h1>Language</h1>
-            <div class="language-content">
-                    <form class="lang-select">
-                        <select name="language-selector">
-                            <option value="English">English(Default)</option>
-                            <option value="Yoruba">Yoruba</option>
-                            <option value="hausa">Hausa</option>
-                            <option value="urohobo">Urohobo</option>
-                            <option value="urohobo">Efik</option>
-                            <option value="urohobo">jukun</option>
-                            <option value="urohobo">Ibibio</option>
-                            <option value="urohobo">Akwa Ibom</option>
-                        </select>
+                <div class="language">
+                    <h1>Language</h1>
+                    <div class="language-content">
+                            <form class="lang-select">
+                                <select name="language-selector">
+                                    <option value="English">English(Default)</option>
+                                    <option value="Yoruba">Yoruba</option>
+                                    <option value="hausa">Hausa</option>
+                                    <option value="urohobo">Urohobo</option>
+                                    <option value="urohobo">Efik</option>
+                                    <option value="urohobo">jukun</option>
+                                    <option value="urohobo">Ibibio</option>
+                                    <option value="urohobo">Akwa Ibom</option>
+                                </select>
+                            </form>
+
+                    </div><!--language-content-->
+
+                </div><!--language-->
+
+
+                <div class="language">
+                    <h1>Timezone</h1>
+                    <div class="language-content">
+                            <form class="lang-select">
+                                <select name="language-selector">
+                                    <option value="English">English(Default)</option>
+                                    <option value="Yoruba">Yoruba</option>
+                                    <option value="hausa">Hausa</option>
+                                    <option value="urohobo">Urohobo</option>
+                                    <option value="urohobo">Efik</option>
+                                    <option value="urohobo">jukun</option>
+                                    <option value="urohobo">Ibibio</option>
+                                    <option value="urohobo">Akwa Ibom</option>
+                                </select>
+                            </form>
+
+                    </div><!--language-content-->
+
+                </div><!--language-->
+
+                <div class="Timezone-radio">
+                    <h1>Timezone</h1>
+                    <form class="radio"> 
+                        <div class="time-zone-12" id="zone-12">
+                            <label for="time-24"><h1>24 Hours</h1></label>
+                            <input type="radio" name="time" value="24 Hours" id="time-24" checked>
+                        </div>
+                
+                        <div class="time-zone-24" id="zone-24">
+                            <label for="time-12"><h1>12 Hours</h1></label>
+                            <input type="radio" name="time" value="12 Hours" id="time-12">
+                        </div>
                     </form>
-
-            </div><!--language-content-->
-
-        </div><!--language-->
-
-
-        <div class="language">
-            <h1>Timezone</h1>
-            <div class="language-content">
-                    <form class="lang-select">
-                        <select name="language-selector">
-                            <option value="English">English(Default)</option>
-                            <option value="Yoruba">Yoruba</option>
-                            <option value="hausa">Hausa</option>
-                            <option value="urohobo">Urohobo</option>
-                            <option value="urohobo">Efik</option>
-                            <option value="urohobo">jukun</option>
-                            <option value="urohobo">Ibibio</option>
-                            <option value="urohobo">Akwa Ibom</option>
-                        </select>
-                    </form>
-
-            </div><!--language-content-->
-
-        </div><!--language-->
-
-        <div class="Timezone-radio">
-            <h1>Timezone</h1>
-            <form class="radio"> 
-                <div class="time-zone-12" id="zone-12">
-                    <label for="time-24"><h1>24 Hours</h1></label>
-                    <input type="radio" name="time" value="24 Hours" id="time-24" checked>
                 </div>
-        
-                <div class="time-zone-24" id="zone-24">
-                    <label for="time-12"><h1>12 Hours</h1></label>
-                    <input type="radio" name="time" value="12 Hours" id="time-12">
-                </div>
-            </form>
+                
+
+            <div class="save-changes">
+                <a href="#"><h1>Save Changes</h1></a>
+            </div>
+
+        </div><!--gen-tabcontent-->
+
+
+        <div class="general-tabcontent" id="not-content">
+
+        <div class="switch-toggle">
+
+            <label class="switch">
+                <input type="checkbox" id="flexSwitchCheckDefault">
+                <span class="slider"></span>
+            </label>
+
+            <span class="label-text">Message</span>
+
         </div>
-        
 
-    <div class="save-changes">
-        <a href="#"><h1>Save Changes</h1></a>
-    </div>
+        <div class="switch-toggle">
 
-</div><!--gen-tabcontent-->
+            <label class="switch">
+                <input type="checkbox" id="flexSwitchCheckDefault">
+                <span class="slider"></span>
+            </label>
 
+            <span class="label-text">Task Update</span>
 
-<div class="general-tabcontent" id="not-content">
-
-<div class="switch-toggle">
-
-    <label class="switch">
-        <input type="checkbox" id="flexSwitchCheckDefault">
-        <span class="slider"></span>
-    </label>
-
-    <span class="label-text">Message</span>
-
-</div>
-
-<div class="switch-toggle">
-
-    <label class="switch">
-        <input type="checkbox" id="flexSwitchCheckDefault">
-        <span class="slider"></span>
-    </label>
-
-    <span class="label-text">Task Update</span>
-
-</div>
+        </div>
 
 
-<div class="switch-toggle">
+        <div class="switch-toggle">
 
-    <label class="switch">
-        <input type="checkbox" id="flexSwitchCheckDefault">
-        <span class="slider"></span>
-    </label>
+            <label class="switch">
+                <input type="checkbox" id="flexSwitchCheckDefault">
+                <span class="slider"></span>
+            </label>
 
-    <span class="label-text">Task Deadline</span>
+            <span class="label-text">Task Deadline</span>
 
-</div>
-
-
-<div class="switch-toggle">
-
-    <label class="switch">
-        <input type="checkbox" id="flexSwitchCheckDefault">
-        <span class="slider"></span>
-    </label>
-
-    <span class="label-text">Mentor Help</span>
-
-</div>
+        </div>
 
 
-<div class="save-changes">
-    <a href="#"><h1>Save Changes</h1></a>
-</div>
+        <div class="switch-toggle">
 
-</div><!--gen-tabcontent-->
+            <label class="switch">
+                <input type="checkbox" id="flexSwitchCheckDefault">
+                <span class="slider"></span>
+            </label>
+
+            <span class="label-text">Mentor Help</span>
+
+        </div>
+
+
+        <div class="save-changes">
+            <a href="#"><h1>Save Changes</h1></a>
+        </div>
+
+        </div><!--gen-tabcontent-->
 
 
 
@@ -267,6 +279,38 @@
 }
 
 document.getElementById("defaultOpen").click();
+
+
+function openNav(){
+    const sidebar = document.getElementById('side_bar');
+    sidebar.style.display = "flex";
+    sidebar.style.position = "fixed";
+    sidebar.style.height = "100vh";
+    sidebar.style.zIndex = "2000";
+    sidebar.style.alignItems = "flex-start";
+}
+
+function closeNav(){
+    const sidebar = document.getElementById('side_bar');
+    sidebar.style.display = "none";
+
+}
+
+function checkScreenSize(){
+    const sidebar = document.getElementById('side_bar');
+    if(window.innerWidth > 1200){
+        sidebar.style.display = "flex";
+        sidebar.style.position = "static";
+        sidebar.style.width = "16%";
+        sidebar.style.zIndex = "auto";
+        sidebar.style.alignItems = "center";
+    }else{
+        sidebar.style.display = "none";
+    }
+}
+
+window.addEventListener('resize', checkScreenSize);
+
 </script>
 </body>
 
