@@ -21,7 +21,9 @@
                     <div class="img"><img src="../image/book-square.png"></div>
                     <div class="text"><h1>Nuegas</h1></div> 
                 </div>
-                <div class="closebtn" onclick="closeNav()"></div> 
+                <div class="closebtn" onclick="closeNav()">
+                    <div class="close_tab_image"></div><!--close_tab_image-->
+                </div><!--closebtn-->
             </div><!--Nugas_header-->
 
             <div class="hug">
@@ -72,7 +74,7 @@
 
         </div><!---end of hug-text-->
 
-        <div class="help-center">
+        <div class="help-center" id="help_center">
             <div class="question-image"></div>
             <div class="help-center-content">
                 <h1>Help Center</h1>
@@ -113,12 +115,19 @@
             <div class="display_text">
                 <h3>Settings</h3>
             </div>
+
+            <div class="tabcontent-body-header tabcontent_hide">
+                <div class="tabcontent-body-header-content">
+                    <button class="general" onclick="settingsInfo(event, 'gen-content')"  id="defaultOpen">General</button>
+                    <button class="general" onclick="settingsInfo(event, 'not-content')">Notification</button>
+                </div>
+            </div><!--tabcontent-body-header-->
             
         </div><!---tabcontent-settings-header-->
 
     <div class="tabcontent-body">
 
-        <div class="tabcontent-body-header">
+        <div class="tabcontent-body-header tabcontent_show">
             <div class="tabcontent-body-header-content">
                 <button class="general" onclick="settingsInfo(event, 'gen-content')"  id="defaultOpen">General</button>
                 <button class="general" onclick="settingsInfo(event, 'not-content')">Notification</button>
@@ -255,13 +264,6 @@
 
 <script>
     function settingsInfo(evt, cont){
-    
-    if (!localStorage.getItem('tabClicked')) {
-        localStorage.setItem('tabClicked', 'true');
-        location.reload(); // Reload the page
-        return;
-    }
-    
     var i, gen_content, general;
     gen_content = document.getElementsByClassName('general-tabcontent');
     for(i=0; i<gen_content.length; i++){
@@ -278,16 +280,24 @@
     
 }
 
-document.getElementById("defaultOpen").click();
+window.onload = function() {
+    const defaultButton = document.getElementById("defaultOpen");
+    if (defaultButton) {
+        // Trigger the settingsInfo function directly
+        settingsInfo({ currentTarget: defaultButton }, 'gen-content');
+    }
+};
 
 
 function openNav(){
     const sidebar = document.getElementById('side_bar');
     sidebar.style.display = "flex";
     sidebar.style.position = "fixed";
-    sidebar.style.height = "100vh";
-    sidebar.style.zIndex = "2000";
+    sidebar.style.zIndex = "1000";
     sidebar.style.alignItems = "flex-start";
+    sidebar.style.width = "auto";
+
+    
 }
 
 function closeNav(){
@@ -298,7 +308,7 @@ function closeNav(){
 
 function checkScreenSize(){
     const sidebar = document.getElementById('side_bar');
-    if(window.innerWidth > 1200){
+    if(window.innerWidth > 1251){
         sidebar.style.display = "flex";
         sidebar.style.position = "static";
         sidebar.style.width = "16%";

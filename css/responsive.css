@@ -1,101 +1,652 @@
-@media screen and (max-width: 1200px) {
-.side-bar{
-    display: none;
-}
+@media screen and (max-width:1251px) {
 
-.Nuegas_header{
-    justify-content: space-between;
-}
+    html,
+    body {
+        overflow-x: hidden;
+    }
 
-.Hug-text{
-    width: 230px;
-}
+    .side-bar {
+        display: none;
+    }
 
-.content{
-    gap: 20px;
-}
+    .Nuegas_header {
+        justify-content: space-between;
+    }
 
-.image{
-    left: 30px;
-}
+    .closebtn {
+        display: flex !important;
+    }
 
-.image-text{
-    left: 75px;
-}
+    .settings-message,.message-tabcontent,
+    .task_content {
+        width: 100% !important;
+        height: auto;
+        margin: 0 auto;
+    }
 
-.closebtn{
-    display: flex;
-    cursor: pointer;
-}
+    .tabcontent-settings-header {
+        height: auto;
+        gap: 35px;
+        padding-bottom: 20px;
 
-.help-center{
-    margin: 0 auto;
-    display: none !important;
-}
+    }
 
-.settings-message{
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-}
+    .setting_open {
+        display: flex;
+    }
 
-.tabcontent-settings-header{
-    height: auto;
-    gap: 35px;
-    padding-bottom: 20px;
+    .setting_text,
+    .task_header_text {
+        display: none;
+    }
 
-}
+    .display_text {
+        display: flex;
+    }
 
-.setting_open{
-    display: flex;
-}
+    .mobile_link {
+        height: 45px;
+        border: 1px solid #F5F5F7;
+        border-radius: 10px;
+    }
 
-.setting_text{
-    display: none;
-}
 
-.display_text{
-    display: flex;
-}
+    .mentor-message{
+        width: 100%;
+    }
 
-}
-
-@media screen and (max-width: 700px) {
-.Hug-text{
-    width: 150px;
-}
-
-.image{
-    left: 20px;
-}
-
-.image-text{
-    left: 55px;
-}
-
-.setting_open{
-    width: 24px;
-    height: 24px;
-}
-
-.closebtn{
-    width: 15px;
-    height: 15px;
-}
-
-.tabcontent-body-header{
-    width: 90%;
-    margin: 0 auto;
-}
-
-.save-changes{
-    width: 300px;
-    margin: 0 auto;
-    margin-top: 150px;
-}
-
-.tabcontent-body{
-    height: 700px;
-}
     
+
+
+
+}
+
+
+@media screen and (max-width: 990px) {
+
+
+
+    .assigned-assignment {
+        margin-left: 20px;
+    }
+
+    .assigned-assignment h1 {
+        margin-left: 30px;
+    }
+
+    .task-search-form {
+        width: 270px;
+        height: 43px;
+    }
+
+    .deadline,
+    .category {
+        display: none;
+    }
+
+    .mobile_link {
+        display: flex;
+    }
+
+    .task_body_content {
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+
+
+    .description,
+    .mobile-apps {
+        width: 620px;
+    }
+
+    .Mentor-container-content{
+        gap: 10px;
+    }
+
+    .content-info-header-content h3, .content-info-1:nth-child(2) p, .content-info-follow p, .mentor-task-paragraph p{
+        font-family: 'Plus Jakarta Sans';
+        font-size: 13px;
+    }
+
+    .content-info-header-image {
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+
+
+
+@media screen and (min-width: 690px) and (max-width: 740px) {
+
+
+    .setting_open {
+        width: 24px;
+        height: 24px
+    }
+
+    .closebtn {
+        width: 15px;
+        height: 15px;
+    }
+
+    .tabcontent-body-header-content button {
+        padding-bottom: 10px;
+    }
+
+    .tabcontent-body-header {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .save-changes {
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 100px;
+    }
+
+    .task_changes {
+        margin-top: 15px !important;
+    }
+
+    .tabcontent-body {
+        height: 700px;
+        margin-inline-start: 5px;
+        margin-inline-end: 5px;
+    }
+
+    .tabcontent_show {
+        display: none !important;
+    }
+
+    .tabcontent_hide {
+        display: flex !important;
+    }
+
+    .description,
+    .mobile-apps {
+        width: 550px;
+    }
+
+    .mentor-layout-container{
+        width: 95% !important;
+        margin: 20px auto;
+    }
+
+    .Mentor-container-content:nth-child(2){
+        margin-top:12px;
+    }
+
+    .Mentor-container-content{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .content-info{
+        width: 100%;
+    }
+
+    .content-info-header-content h3, .content-info-1:nth-child(2) p, .content-info-follow p, .mentor-task-paragraph p, .carousel-review-content p{
+        font-family: 'Plus Jakarta Sans';
+        font-size: 15px;
+    }
+
+    .content-info-header-image {
+        width: 48px;
+        height: 48px;
+    }
+
+}
+
+@media screen and (min-width: 651px) and (max-width:689.5px) {
+
+    .description,
+    .mobile-apps {
+        width: 550px;
+    }
+
+    .mentor-layout-container{
+        width: 95% !important;
+        margin: 20px auto;
+    }
+
+    .Mentor-container-content{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .Mentor-container-content:nth-child(2){
+        margin-top:12px;
+    }
+
+    .content-info{
+        width: 100%;
+    }
+
+    .content-info-header-content h3, .content-info-1:nth-child(2) p, .content-info-follow p, .mentor-task-paragraph p, .carousel-review-content p{
+        font-family: 'Plus Jakarta Sans';
+        font-size: 15px;
+    }
+
+    .content-info-header-image {
+        width: 48px;
+        height: 48px;
+    }
+
+
+
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 650px) {
+
+
+    .assigned-assignment h1 {
+        margin-left: 20px;
+    }
+
+    .description,
+    .mobile-apps {
+        width: 500px
+    }
+
+    .mentor-carousel-slider-content{
+        gap: 0px;
+    }
+
+    .mentor-layout-container{
+        width: 95% !important;
+        margin: 20px auto;
+    }
+
+    .Mentor-container-content:nth-child(2){
+        margin-top:12px;
+    }
+
+
+    .Mentor-container-content{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .content-info{
+        width: 100%;
+    }
+
+    .content-info-header-content h3, .content-info-1:nth-child(2) p, .content-info-follow p, .mentor-task-paragraph p, .carousel-review-content p{
+        font-family: 'Plus Jakarta Sans';
+        font-size: 15px;
+    }
+
+    .content-info-header-image {
+        width: 48px;
+        height: 48px;
+    }
+
+}
+
+@media screen and (min-width: 495px) and (max-width: 600.5px) {
+
+    .description,
+    .mobile-apps {
+        width: auto;
+    }
+
+    .Mentor-container-content:nth-child(2){
+        margin-top:12px;
+    }
+
+
+    .mentor-layout-container{
+        width: 95% !important;
+        margin: 20px auto;
+    }
+
+    .Mentor-container-content{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .content-info{
+        width: 100%;
+    }
+
+    .content-info-header-content h3, .content-info-1:nth-child(2) p, .content-info-follow p, .mentor-task-paragraph p, .carousel-review-content p{
+        font-family: 'Plus Jakarta Sans';
+        font-size: 15px;
+    }
+
+    .content-info-header-image {
+        width: 48px;
+        height: 48px;
+    }
+
+       .content-info{
+        width: 100%;
+    }
+
+    .content-info-header-content h3, .content-info-1:nth-child(2) p, .content-info-follow p, .mentor-task-paragraph p, .carousel-review-content p{
+        font-family: 'Plus Jakarta Sans';
+        font-size: 15px;
+    }
+
+    .content-info-header-image {
+        width: 48px;
+        height: 48px;
+    }
+
+}
+
+@media screen and (min-width: 400px) and (max-width: 494.5px) {
+    .progress,
+    .volume {
+        width: 59px !important;
+    }
+
+    .current-time,
+    .duration-time {
+        font-size: 12px;
+    }
+
+    .custom-controls input[type="range"] {
+        margin: 0 2px;
+    }
+
+    .description {
+        width: auto;
+        height: auto
+    }
+
+    .mobile-apps {
+        width: 310px;
+        height: auto
+    }
+
+    .mobile-apps h1 {
+        font-size: 24px;
+    }
+
+    .student-icon-image h1,
+    .icon-hour h1,
+    .description p,
+    .mobile-apps p,
+    .mobile-apps p span,
+    .Assessment-content-1 p {
+        font-size: 12px;
+    }
+
+    .description h1,
+    .essence-assessment h1,
+    .creating-awesome:nth-of-type(1) h3 {
+        font-size: 20px;
+    }
+
+    .creating-awesome:nth-of-type(1) h3,
+    .creating-awesome:nth-of-type(2) h3 {
+        font-size: 18px;
+    }
+
+    .assessment-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .Assessment-content-1 {
+        margin: 25px 0px;
+    }
+
+    .Assessment-content-1:nth-child(1) {
+        margin-top: 10px;
+    }
+
+    .mentor-content-header{
+        width: 95%;
+    }
+
+    #slide_1, #slide_2,#slide_3,#slide_4,#slide_5,#slide_6,#slide_7,#slide_8{
+        width: 376px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    #slide_1{
+        margin-right: 20px;
+        margin-left: -2px;
+    }
+
+    #slide_8{
+        margin-right: 12px;
+    }
+
+
+    .mentor-layout-container{
+        width: 95% !important;
+        margin: 20px auto;
+    }
+
+    .Mentor-container-content:nth-child(2){
+        margin-top:12px;
+    }
+
+
+    .Mentor-container-content{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .content-info{
+        width: 100%;
+    }
+
+    .content-info-header-content h3, .content-info-1:nth-child(2) p, .content-info-follow p, .mentor-task-paragraph p, .carousel-review-content p{
+        font-family: 'Plus Jakarta Sans';
+        font-size: 15px;
+    }
+
+    .content-info-header-image {
+        width: 48px;
+        height: 48px;
+    }
+    
+
+}
+
+
+
+@media screen and (min-width: 359px) and (max-width:399.5px) {
+    .progress,
+    .volume {
+        width: 59px !important;
+    }
+
+    .current-time,
+    .duration-time {
+        font-size: 12px;
+    }
+
+    .custom-controls input[type="range"] {
+        margin: 0 2px;
+    }
+
+    .description {
+        width: auto;
+        height: auto
+    }
+
+    .mobile-apps {
+        width: 240px
+    }
+
+    .description p,
+    .Assessment-content-1 p {
+        font-size: 12px;
+    }
+
+    .mobile-apps h1 {
+        font-size: 20px;
+    }
+
+    .student-icon-image h1,
+    .icon-hour h1 {
+        font-size: 14px;
+    }
+
+    .task-details-1 {
+        gap: 20px;
+    }
+
+    .save-changes {
+        width: 279px;
+        height: 44px;
+    }
+
+    .mentor-content-header{
+        width: 95%;
+    }
+
+    .mentor-layout-container{
+        width: 95% !important;
+        margin: 20px auto;
+    }
+
+    .Mentor-container-content:nth-child(2){
+        margin-top:12px;
+    }
+
+    #slide_1, #slide_2,#slide_3,#slide_4,#slide_5,#slide_6,#slide_7,#slide_8{
+        width: 360px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    #slide_1{
+        margin-right: 20px;
+        margin-left: -2px;
+    }
+
+    #slide_8{
+        margin-right: 12px;
+    }
+
+
+    .Mentor-container-content{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .content-info{
+        width: 100%;
+    }
+
+    .content-info-header-content h3, .content-info-1:nth-child(2) p, .content-info-follow p, .mentor-task-paragraph p, .carousel-review-content p{
+        font-family: 'Plus Jakarta Sans';
+        font-size: 15px;
+    }
+
+    .content-info-header-image {
+        width: 48px;
+        height: 48px;
+    }
+
+}
+
+
+@media screen and (min-width: 320px) and (max-width:358px) {
+
+
+     .progress,
+    .volume {
+        width: 50px !important;
+    }
+
+    .current-time,
+    .duration-time {
+        font-size: 12px;
+    }
+
+    .custom-controls input[type="range"] {
+        margin: 0 2px;
+    }
+    
+
+    .mobile-apps, .description{
+        width: 250px;
+        height: auto;
+    }
+
+    .description p,
+    .Assessment-content-1 p {
+        font-size: 12px;
+    }
+
+    .mobile-apps h1 {
+        font-size: 20px;
+    }
+
+    .student-icon-image h1,
+    .icon-hour h1 {
+        font-size: 14px;
+    }
+
+    .task-details-1 {
+        gap: 20px;
+    }
+
+    .save-changes {
+        width: 279px;
+        height: 44px;
+    }
+
+    .mentor-content-header{
+        width: 95%;
+    }
+    
+    .mentor-layout-container{
+        width: 95% !important;
+        margin: 20px auto;
+    }
+
+    .Mentor-container-content{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .content-info{
+        width: 100%;
+    }
+
+    #slide_1, #slide_2,#slide_3,#slide_4,#slide_5,#slide_6,#slide_7,#slide_8{
+        width: 300px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    #slide_1{
+        margin-right: 20px;
+        margin-left: -2px;
+    }
+
+    #slide_8{
+        margin-right: 22px;
+    }
+
+
+    .content-info-header-content h3, .content-info-1:nth-child(2) p, .content-info-follow p, .mentor-task-paragraph p, .carousel-review-content p{
+        font-family: 'Plus Jakarta Sans';
+        font-size: 15px;
+    }
+
+    .content-info-header-image {
+        width: 48px;
+        height: 48px;
+    }
+
+
+
 }

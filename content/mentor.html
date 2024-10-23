@@ -5,67 +5,74 @@
     <meta http-equiv = "X-UA-compatible" content = "ie=edge">
     <title>Figma Design</title>
     <link rel="stylesheet" type="text/css" href="../css/figma1.css">
+    <link rel="stylesheet" type="text/css" href="../css/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-<div class="side-bar">
+<div class="side-bar" id="side_bar">
 
-        <div class="Hug-text">
+    <div class="Hug-text">
+        <div class="Nuegas_header">
             <div class="huegas-text">
                 <div class="img"><img src="../image/book-square.png"></div>
-                <div class="text"><h1>Nuegas</h1></div>  
+                <div class="text"><h1>Nuegas</h1></div> 
             </div>
+            <div class="closebtn" onclick="closeNav()">
+                <div class="close_tab_image">
+                </div><!--close_tab_image-->
+            </div><!--closebtn-->
+        </div><!--Nugas_header-->
 
-            <div class="hug">
-                <a href="overview.html" class="content">
-                    
-                    <div class="image"><img src="../image/category-2.png"></div>
-                    <div class="image-text">
-                        <h1>Overview</h1>
-                    </div>
-                </a><!---end of content-->
+        <div class="hug">
+            <a href="overview.html" class="content">
+               
+                <div class="image"><img src="../image/category-2.png"></div>
+                <div class="image-text">
+                    <h1>Overview</h1>
+                </div>
+            </a><!---end of content-->
 
-                <a href="task.html" class="content">
-                    <!-- <img src="../image/book.png"> -->
-                    <div class="image"><img src="../image/book.png"></div>
-                    <div class="image-text">
-                        <h1>Tasks</h1>
-                    </div>
-                    
-                </a><!---end of content-->
+            <a href="task.html" class="content">
+                <!-- <img src="../image/book.png"> -->
+                <div class="image"><img src="../image/book.png"></div>
+                <div class="image-text">
+                    <h1>Tasks</h1>
+                </div>
+                
+            </a><!---end of content-->
 
-                <a href="mentor.html" class="content" id="content_active">
-                    <!-- <img src="../image/user-octagon.png"> -->
-                    <div class="image"><img src="../image/user-octagon.png"></div>
-                    <div class="image-text">
-                        <h1>Mentors</h1>
-                    </div>
-                    
-                </a><!---end of content-->
+            <a href="mentor.html" class="content" id="content_active">
+                <!-- <img src="../image/user-octagon.png"> -->
+                <div class="image"><img src="../image/user-octagon.png"></div>
+                <div class="image-text">
+                    <h1>Mentors</h1>
+                </div>
+               
+            </a><!---end of content-->
 
-                <a href="message.html" class="content">
-                    <!-- <img src="../image/message.png"> -->
-                    <div class="image"><img src="../image/message.png"></div>
-                    <div class="image-text">
-                        <h1>Message</h1>
-                    </div>
-                    
-                </a><!---end of content-->
+            <a href="message.html" class="content">
+                <!-- <img src="../image/message.png"> -->
+                <div class="image"><img src="../image/message.png"></div>
+                <div class="image-text">
+                    <h1>Message</h1>
+                </div>
+               
+            </a><!---end of content-->
 
-                <a href="settings.html" class="content">
-                    <!-- <img src="../image/setting-2.png"> -->
-                    <div class="image"><img src="../image/setting-2.png"></div>
-                    <div class="image-text">
-                        <h1>Settings</h1>
-                    </div>
-                    
-                </a><!---end of content-->
-            </div>
+            <a href="settings.html" class="content">
+                <!-- <img src="../image/setting-2.png"> -->
+                <div class="image"><img src="../image/setting-2.png"></div>
+                <div class="image-text">
+                    <h1>Settings</h1>
+                </div>
+                
+            </a><!---end of content-->
+        </div>
 
-        </div><!---end of hug-text-->
+    </div><!---end of hug-text-->
 
         <div class="help-center">
             <div class="question-image"></div>
@@ -84,12 +91,20 @@
 
 
   <!--tabcontent-3-->
-  <div class="tabcontent settings-message" id="content-3">
+  <div class="tabcontent mentor-message" id="content-3">
     <div class="tabcontent-header Task">
         <div class="task-details">
-            <div class="settings-header Mentors">
-                <h1>Explore Mentors</h1>
-            </div>
+            <div class="task_header">
+                <div class="setting_open task_open" onclick="openNav()">
+                    <div class="open_tab_image">
+                        <img src="../image/menu.png">
+                    </div>
+                </div><!--setting_open-->
+
+                <div class="settings-header task_header_text">
+                    <h1>Explore Mentors</h1>
+                 </div><!--settings-header-->
+            </div><!--task_header-->
 
             <div class="settings-header-content">
                 <a href="#"><img src="../image/notif.png"></a>
@@ -97,6 +112,10 @@
             </div>
 
         </div><!--task-details-->
+
+        <div class="display_text">
+            <h3>Explore Mentors</h3>
+        </div>
 
     <div class="task-details-1">
 
@@ -114,15 +133,19 @@
                         <div class="category-image">
                         <img src="../image/element-1.png">
                         <h1>Category</h1>
-                        </div>
-                    </div>
+                        </div><!--category-image-->
+                    </div><!--category-->
 
                     <div class="deadline">
                         <div class="deadline-image">
                             <img src="../image/sort.png">
                             <h1>Sort By: Deadline</h1>
-                        </div>
-                    </div>
+                        </div><!--deadline-image-->
+                    </div><!--deadline-->
+
+                    <div class="mobile_link">
+                        <div class="task_mobile_link"></div><!--task_mobile_link-->
+                    </div><!--mobile_link-->
                 </div>
      </div><!--task-details-1-->
 
@@ -133,17 +156,17 @@
         <div class="mentor-content-header">
             <div class="mentor-header">
                 <h3>Recent Mentors</h3>
-            </div>
+            </div><!--mentor-header-->
             <div class="mentor-arrow-keys">
                 <div data-carousel-parent="#mentor_carousel" data-carousel-arrow="left" class="arrow" id="carousel-arrow-left"></div>
                 <div data-carousel-parent="#mentor_carousel" data-carousel-arrow="right" class="arrow" id="carousel-arrow-right"></div>
-            </div>
+            </div><!--mentor-arrow-keys-->
         </div><!---mentor-content-header-->
 
         <div class="mentor-carousel-slider">
             <div data-carousel-parent-elem id="mentor_carousel"  class="mentor-carousel-slider-content">
                 <div data-carousel class="w328px">
-                    <div class="carousel-slides">
+                    <div class="carousel-slides" id="slide_1">
                         <div class="carousel-slides-content">
                             <div class="carousel-content">
                                 <div class="carousel-image carousel-1"></div>
@@ -176,7 +199,7 @@
                 </div><!--carousel-slides-->
 
                 <div data-carousel class="w328px">
-                <div class="carousel-slides">
+                <div class="carousel-slides" id="slide_2">
                     <div class="carousel-slides-content">
                         <div class="carousel-content">
                             <div class="carousel-image carousel-2"></div>
@@ -209,7 +232,7 @@
                 </div>
 
                 <div data-carousel class="w328px">
-                <div class="carousel-slides">
+                <div class="carousel-slides" id="slide_3">
                     <div class="carousel-slides-content">
                         <div class="carousel-content">
                             <div class="carousel-image carousel-3"></div>
@@ -242,7 +265,7 @@
                 </div>
 
                 <div data-carousel class="w328px">
-                <div class="carousel-slides">
+                <div class="carousel-slides" id="slide_4">
                     <div class="carousel-slides-content">
                         <div class="carousel-content">
                             <div class="carousel-image carousel-4"></div>
@@ -275,7 +298,7 @@
                 </div>
 
                 <div data-carousel class="w328px">
-                    <div class="carousel-slides">
+                    <div class="carousel-slides" id="slide_5">
                         <div class="carousel-slides-content">
                             <div class="carousel-content">
                                 <div class="carousel-image carousel-5"></div>
@@ -308,7 +331,7 @@
                 </div>
 
                 <div data-carousel class="w328px">
-                <div class="carousel-slides">
+                <div class="carousel-slides" id="slide_6">
                     <div class="carousel-slides-content">
                         <div class="carousel-content">
                             <div class="carousel-image carousel-6"></div>
@@ -341,7 +364,7 @@
                 </div>
                 
                 <div data-carousel class="w328px">
-                <div class="carousel-slides">
+                <div class="carousel-slides" id="slide_7">
                     <div class="carousel-slides-content">
                         <div class="carousel-content">
                             <div class="carousel-image carousel-7"></div>
@@ -374,7 +397,7 @@
                 </div>
 
                 <div data-carousel class="w328px">
-                <div class="carousel-slides">
+                <div class="carousel-slides" id="slide_8">
                     <div class="carousel-slides-content">
                         <div class="carousel-content">
                             <div class="carousel-image carousel-8"></div>
@@ -716,6 +739,39 @@ function InitCarousel() {
 }
 
 InitCarousel();
+
+
+function openNav(){
+    const sidebar = document.getElementById('side_bar');
+    sidebar.style.display = "flex";
+    sidebar.style.position = "fixed";
+    sidebar.style.width = "auto";
+    sidebar.style.zIndex = "2000";
+    sidebar.style.alignItems = "flex-start";
+    sidebar.style.top = "0"; // Ensure it starts from the top
+    sidebar.style.left = "0"; // Ensure it starts from the left
+}
+
+function closeNav(){
+    const sidebar = document.getElementById('side_bar');
+    sidebar.style.display = "none";
+
+}
+
+function checkScreenSize(){
+    const sidebar = document.getElementById('side_bar');
+    if(window.innerWidth > 1251){
+        sidebar.style.display = "flex";
+        sidebar.style.position = "static";
+        sidebar.style.width = "16%";
+        sidebar.style.zIndex = "auto";
+        sidebar.style.alignItems = "center";
+    }else{
+        sidebar.style.display = "none";
+    }
+}
+
+window.addEventListener('resize', checkScreenSize);
 
 
 </script>

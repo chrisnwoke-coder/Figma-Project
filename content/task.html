@@ -5,19 +5,26 @@
     <meta http-equiv = "X-UA-compatible" content = "ie=edge">
     <title>Figma Design</title>
     <link rel="stylesheet" type="text/css" href="../css/figma1.css">
+    <link rel="stylesheet" type="text/css" href="../css/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Satoshi:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-        <div class="side-bar">
+        <div class="side-bar"  id="side_bar">
 
                 <div class="Hug-text">
-                    <div class="huegas-text">
-                        <div class="img"><img src="../image/book-square.png"></div>
-                        <div class="text"><h1>Nuegas</h1></div>  
-                    </div>
+                    <div class="Nuegas_header">
+                        <div class="huegas-text">
+                            <div class="img"><img src="../image/book-square.png"></div>
+                            <div class="text"><h1>Nuegas</h1></div> 
+                        </div>
+                        <div class="closebtn" onclick="closeNav()">
+                            <div class="close_tab_image">
+                            </div><!--close_tab_image-->
+                        </div><!--closebtn-->
+                    </div><!--Nugas_header-->
 
                     <div class="hug">
                         <a href="overview.html" class="content">
@@ -85,20 +92,33 @@
 
 
              <!--tabcontent-2-->
-             <div class="tabcontent" id="content-2">
+             <div class="tabcontent task_content" id="content-2">
             
                 <div class="tabcontent-header Task">
                     <div class="task-details">
-                        <div class="settings-header">
-                            <h1>Detail Task</h1>
-                        </div>
-    
+
+                         <div class="task_header">
+                            <div class="setting_open task_open" onclick="openNav()">
+                                <div class="open_tab_image">
+                                    <img src="../image/menu.png">
+                                </div>
+                            </div><!--setting_open-->
+
+                            <div class="settings-header task_header_text">
+                                <h1>Detail Task</h1>
+                             </div><!--settings-header-->
+                        </div><!--task_header-->
+
                         <div class="settings-header-content">
                             <a href="#"><img src="../image/notif.png"></a>
                             <a href="#"><img src="../image/Profil.png"></a>
-                        </div>
+                        </div><!--settings-header-content-->
     
                     </div><!--task-details-->
+
+                    <div class="display_text">
+                        <h3>Detail Task</h3>
+                    </div>
     
                 <div class="task-details-1">
     
@@ -109,39 +129,46 @@
                                     <a href="#"><img src="../image/search-normal.png"></a>
                                 </div>
                             </form>
-                        </div>
+                        </div><!--task-search-form-->
     
                             <div class="task-section">
                                 <div class="category">
                                     <div class="category-image">
                                     <img src="../image/element-1.png">
                                     <h1>Category</h1>
-                                    </div>
-                                </div>
+                                    </div><!--category-image-->
+                                </div><!--category-->
     
                                 <div class="deadline">
                                     <div class="deadline-image">
                                         <img src="../image/sort.png">
                                         <h1>Sort By: Deadline</h1>
-                                    </div>
-                                </div>
-                            </div>
+                                    </div><!--deadline-image-->
+                                </div><!--deadline-->
+
+                                <div class="mobile_link">
+                                    <div class="task_mobile_link"></div><!--task_mobile_link-->
+                                </div><!--mobile_link-->
+                            </div><!--task-section-->
+
                  </div><!--task-details-1-->
     
                 
                  </div><!--tabcontent-header task-->
     
     
-        <div class="tabcontent-body-content">
+        <div class="tabcontent-body-content task_body_content">
             
             <div class="tabcontent-body-content-1">
     
                 <div class="task-menu">
                     <div class="task-menu-video">
+                        <div class="video_player">
                         <video id="video" poster="../image/Image.png">
                             <source src="../image/responsive.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
+                    </div><!--video_player-->
                         <div class="custom-controls">
                             <button class="play"><i class="fas fa-play"></i></button>
                             <button class="pause" style="display:none;"><i class="fas fa-pause"></i></button>
@@ -153,7 +180,7 @@
                             <button class="mirror"><i class="fas fa-arrows-alt-h"></i></button>
                         </div>
                     </div>
-                </div>
+                </div><!--task-menu-->
                 
             
                 <div class="mobile-apps">
@@ -243,8 +270,14 @@
                             <div class="file-image"></div>
                         </div>
                         <p class="label-drag">*drag or browse from device</p>
+
                     </div>
+                    
                 </div>
+            </div>
+
+            <div class="save-changes task_changes">
+                <a href="#"><h1>Submit</h1></a>
             </div>
 
             </div><!--assigned assignment-->
@@ -252,7 +285,7 @@
          </div><!--tabcontent-body-content-->
     
     
-    </div><!--tabcontent-2-->   
+            </div><!--tabcontent-2-->   
             <!--tabcontent-2-->
             
 <script>
@@ -351,6 +384,38 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial call to set button visibility
     updatePlayPauseButtons();
 });
+
+function openNav(){
+    const sidebar = document.getElementById('side_bar');
+    sidebar.style.display = "flex";
+    sidebar.style.position = "fixed";
+    sidebar.style.width = "auto";
+    sidebar.style.zIndex = "2000";
+    sidebar.style.alignItems = "flex-start";
+    sidebar.style.top = "0"; // Ensure it starts from the top
+    sidebar.style.left = "0"; // Ensure it starts from the left
+}
+
+function closeNav(){
+    const sidebar = document.getElementById('side_bar');
+    sidebar.style.display = "none";
+
+}
+
+function checkScreenSize(){
+    const sidebar = document.getElementById('side_bar');
+    if(window.innerWidth > 1251){
+        sidebar.style.display = "flex";
+        sidebar.style.position = "static";
+        sidebar.style.width = "16%";
+        sidebar.style.zIndex = "auto";
+        sidebar.style.alignItems = "center";
+    }else{
+        sidebar.style.display = "none";
+    }
+}
+
+window.addEventListener('resize', checkScreenSize);
 
 </script>
 </body>
